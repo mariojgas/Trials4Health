@@ -1,0 +1,3 @@
+Data : 25/10/2017
+Descrição da Tarefa:Criar repositório no GitHub, e ligar o repositório ao visual studio.
+Tempo Gasto: 1h : 30min
