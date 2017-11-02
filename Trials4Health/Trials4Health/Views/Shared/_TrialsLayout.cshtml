@@ -35,6 +35,17 @@
     <div class="container body-content">
         @RenderBody()
     </div>
+    <footer>
+    <div style="text-align:right; width:100%;" class="panel-footer">
+        <p>
+            João Dinis,
+            Marco Vieira e
+            Mário Simões
+        </p>
+
+        <p>&copy; 2017 - Trials4Health</p>
+    </div>
+    </footer>
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
@@ -42,7 +53,7 @@
     </environment>
     <environment names="Staging,Production">
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>  
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
