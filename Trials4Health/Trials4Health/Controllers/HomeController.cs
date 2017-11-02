@@ -15,7 +15,7 @@ namespace Trials4Health.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "O que é Trials4Health?";
 
             return View();
         }
