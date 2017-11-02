@@ -1,17 +1,49 @@
 ﻿@{
     ViewData["Title"] = "Contact";
 }
-<h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+
+    <div class="panel panel-secondary" style="margin-top:2ex;"> <div class="panel-heading text-center">
+            <h2>Contactos</h2>
+        </div>
+    <form asp-action="Rsvp" method="post">
+
+   
+
+
+
+		<div class="panel-body">
+		
+			
+    <div asp-validation-summary="All"></div> 
+
+    <p>Guarda, Portugal</p>
+
+        <p id="p1">trails4health@gmail.com</p>
+
+			
+
+
+
+
+		
+    <br/><br/>
+			
+            <p>Para qualquer duvida deixe uma mensagem</p>
+
+			<input class="textBox" type="text" id="" placeholder="..." />
+    <br/>
+		<br/>
+
+		</div>
+        
+		<div class="panel-footer text-center">
+
+
+
+			<button class="btn btn-secondary">
+                   Mandar Mensagem
+    </button> </div>
+        </form>
+    </div>
