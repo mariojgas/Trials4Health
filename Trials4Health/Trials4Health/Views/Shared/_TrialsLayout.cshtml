@@ -1,0 +1,51 @@
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Trials4Health</title>
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/css/bootstrap.css" asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.css" asp-fallback-href-include="~/lib/bootstrap/dist/css/bootstrap-theme.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="~/css/bootstrap.min.css" asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-fallback-href-include="~/lib/bootstrap/dist/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
+    </environment>
+    @Html.Raw(JavaScriptSnippet.FullScript)
+
+</head>
+
+
+
+<body>
+    <nav class="nav navbar-default">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                <li><a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>  
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

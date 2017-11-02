@@ -1,0 +1,3 @@
+Data : 25/10/2017
+Descrição da Tarefa:Ligar o repositório ao visual studio.
+Tempo Gasto: 0h : 30min
