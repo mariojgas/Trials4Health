@@ -1,7 +1,11 @@
 ﻿<Properties StartupConfiguration="{60B9E55B-AF67-48B8-808E-8C0D7CA3982B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Trials4Health/Controllers/HomeController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Trials4Health/Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="Trials4Health/Controllers/HomeController.cs" Line="12" Column="10" />
+      <File FileName="Trials4Health/Controllers/HomeController.cs" Line="13" Column="27" />
+      <File FileName="Trials4Health/Views/_ViewStart.cshtml" Line="4" Column="1" />
+      <File FileName="Trials4Health/Views/Home/Index.cshtml" Line="7" Column="1" />
+      <File FileName="Trials4Health/Views/Shared/trials_Layout.cshtml" Line="11" Column="11" />
+      <File FileName="Trials4Health/Views/Shared/_Layout.cshtml" Line="33" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
