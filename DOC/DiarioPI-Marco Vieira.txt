@@ -1,8 +1,14 @@
-Data : 25/10/2017
+﻿Data : 25/10/2017
 Descrição da Tarefa:Criar repositório no GitHub, e ligar o repositório ao visual studio.
 Tempo Gasto: 1h : 30min
 
+<<<<<<< HEAD
 
 Data : 02/11/2017
 Descrição da Tarefa:Criar os layouts para o site health4trails.
 Tempo Gasto: 5h
+=======
+Data : 02/11/2017
+Descrição da Tarefa: Trabalhar no layout
+Tempo Gasto: 5h : 00min
+>>>>>>> f3bc73c078c8873e427a45054961512e383ea68f

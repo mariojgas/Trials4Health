@@ -1,3 +1,7 @@
 Data : 25/10/2017
 Descrição da Tarefa:Criar Repositório no GitHub.
 Tempo Gasto: 1h : 30min
+
+Data : 02/11/2017
+Descrição da Tarefa: Trabalhar no layout
+Tempo Gasto: 5h : 00min
