@@ -11,7 +11,7 @@
                     <ul style="list-style-type:circle">
 
 
-                        <li><a onclick='@{url = "~/Views/PrimeirosSocorros/ParagemCardiorespiratoria.cshtml";}'>Paragem Cardiorespiratoria</a></li>
+                        <li><a onclick='This.urlframe.Attributes("src") = "~/Views/PrimeirosSocorros/ParagemCardiorespiratoria.cshtml";}'>Paragem Cardiorespiratoria</a></li>
                         <li></li>
                         <li></li>
                         <li></li>
@@ -22,7 +22,7 @@
                     </ul>
                 </div>
                 <div style="float:right">
-                    <iframe src="@url" frameborder="0"></iframe>
+                    <iframe id="urlframe" runat="server" frameborder="0"></iframe>
                 </div>
             </div>
 
