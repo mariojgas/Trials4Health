@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-
+using Trials4Health.Models;
+using Trials4Health.Data;
 namespace Trials4Health
 {
     public class Startup
@@ -29,6 +30,14 @@ namespace Trials4Health
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddTransient<Trilho, TrilhosFalsos>();
+
+            services.AddDbContext<ApplicationDbContext>(
+                options => options.UseSqlServer(
+                    Configuration.GetConnectionString("ConnectionStringTrials4Health")
+                )
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

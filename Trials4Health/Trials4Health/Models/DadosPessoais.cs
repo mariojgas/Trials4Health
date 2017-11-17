@@ -13,6 +13,5 @@ namespace Trials4Health.Models
         
         
 
-
     }
 }
