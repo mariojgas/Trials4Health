@@ -20,6 +20,28 @@ namespace Trials4Health.Controllers
             return View();
         }
 
+        public IActionResult Estatisticas()
+        {
+            ViewData["Message"] = "Estatisticas";
+
+            return View();
+        }
+
+        public IActionResult PrimeirosSocorros()
+        {
+            ViewData["Message"] = "Primeiros Socorros";
+
+            return View();
+        }
+
+        public IActionResult Requesitos()
+        {
+            ViewData["Message"] = "Requesitos,Equipamentos e Cuidados a ter";
+
+            return View();
+        }
+
+
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
