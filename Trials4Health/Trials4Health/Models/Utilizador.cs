@@ -11,6 +11,6 @@ namespace Trials4Health.Models
         public int Id { get; set; }
         public int Nome { get; set; }
         public string CondicaoFisica { get; set; }
-
+        public IEnumerable <Historico> historico { get; set; }
     }
 }

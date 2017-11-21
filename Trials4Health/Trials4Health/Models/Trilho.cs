@@ -10,7 +10,8 @@ namespace Trials4Health.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public decimal Distancia { get; set; }
-        public Estatisticas estatisticas { get; set; }
-        
+        //public Estatisticas estatisticas { get; set; }
+        public List<Historico> historico { get; set; }
+       
     }
 }

@@ -12,5 +12,8 @@ namespace Trials4Health.Data
         public ApplicationDbContext(DbContextOptions options) : base(options) { }
 
         public DbSet<Trilho> Trilhos { get; set; }
+        public DbSet<Utilizador> Utilizadores { get; set; }
+        public DbSet<Historico> Historicos { get; set; }
+
     }
 }

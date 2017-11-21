@@ -64,6 +64,7 @@ namespace Trials4Health
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            TrilhosFalsos.CriarTrilhos();
         }
     }
 }

@@ -12,13 +12,13 @@ namespace Trials4Health.Data
             ApplicationDbContext dbContext = (ApplicationDbContext)serviceProvider.GetService(typeof(ApplicationDbContext));
             if (!dbContext.Trilhos.Any())
             {
-                EnsureProductsPopulated(dbContext);
+                CriarTrilhos(dbContext);
             }
 
             dbContext.SaveChanges();
 
         }
-        private static void CriarTrilhos(ApplicationDbContext dbContext)
+        public static void CriarTrilhos(ApplicationDbContext dbContext)
         {
             dbContext.Trilhos.AddRange(
                  new Trilho {Id=1,Nome="Trilho 1",Distancia=8.4,estatisticas=null },
