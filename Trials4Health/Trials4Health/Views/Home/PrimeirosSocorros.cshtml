@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Primeiros Socorros";
 }
-@{string url = ""; }
+
 <div class="panel panel-primary" style="margin: 20px;">
     
     <div class=" panel-title"><h1>@ViewData["Title"]</h1></div>
@@ -9,16 +9,17 @@
         <div class=" panel-body">
                 <div style="float:left">
                     <ul style="list-style-type:circle">
-                        <li><a href="~/Views/PrimeirosSocorros/ParagemCardiorespiratoria.cshtml" target="urlframe">Paragem Cardiorespiratoria</a></li>
-                        <li><a href="~/Views/PrimeirosSocorros/ParagemCardiorespiratoria.cshtml" target="urlframe">Desmaio</a></li>
-                        <li><a href="~/Views/PrimeirosSocorros/ParagemCardiorespiratoria.cshtml" target="urlframe">Ataque cardíaco</a></li>
-                        <li><a href="~/Views/PrimeirosSocorros/ParagemCardiorespiratoria.cshtml" target="urlframe">Hipoglicemia</a></li>
-                        <li><a href="~/Views/PrimeirosSocorros/ParagemCardiorespiratoria.cshtml" target="urlframe">Entorses</a></li>
-                        <li><a href="~/Views/PrimeirosSocorros/ParagemCardiorespiratoria.cshtml" target="urlframe">Hipotermia</a></li>
+                        <li><asp:Button ID="Button1" runat="server" Text="Button" OnClientClick="javascript:function() { document.getElementById('urlframe').setAttribute('src', '~/Views/PrimeirosSocorros/ParagemCardiorespiratoria.cshtml'); }">txt</asp:Button></li>
+                        <li><a onclick="javascript:function() { document.getElementById('urlframe').setAttribute('src', '~/Views/PrimeirosSocorros/ParagemCardiorespiratoria.cshtml'); }" target="urlframe">Paragem Cardiorespiratoria</a></li>
+                        <li><a onclick="javascript:function() { document.getElementById('urlframe').setAttribute('src', '~/Views/PrimeirosSocorros/ParagemCardiorespiratoria.cshtml'); }" target="urlframe">Desmaio</a></li>
+                        <li><a onclick="javascript:function() { document.getElementById('urlframe').setAttribute('src', '~/Views/PrimeirosSocorros/ParagemCardiorespiratoria.cshtml'); }" target="urlframe">Ataque cardíaco</a></li>
+                        <li><a onclick="javascript:function() { document.getElementById('urlframe').setAttribute('src', '~/Views/PrimeirosSocorros/ParagemCardiorespiratoria.cshtml'); }" target="urlframe">Hipoglicemia</a></li>
+                        <li><a onclick="javascript:function() { document.getElementById('urlframe').setAttribute('src', '~/Views/PrimeirosSocorros/ParagemCardiorespiratoria.cshtml'); }" target="urlframe">Entorses</a></li>
+                        <li><a onclick="javascript:function() { document.getElementById('urlframe').setAttribute('src', '~/Views/PrimeirosSocorros/ParagemCardiorespiratoria.cshtml'); }" target="urlframe">Hipotermia</a></li>
                     </ul> 
                 </div>
                 <div style="float:right">
-                    <iframe id="urlframe" runat="server" name="urlframe" frameborder="0"></iframe>
+                    <iframe id="urlframe" runat="server" name="urlframe" src="" frameborder="0"></iframe>
                 </div>
             </div>
     </div>

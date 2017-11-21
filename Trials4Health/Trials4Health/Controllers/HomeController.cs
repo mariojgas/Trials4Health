@@ -34,7 +34,7 @@ namespace Trials4Health.Controllers
             return View();
         }
 
-        public IActionResult Requesitos()
+        public IActionResult Requisitos()
         {
             ViewData["Message"] = "Requesitos,Equipamentos e Cuidados a ter";
 
