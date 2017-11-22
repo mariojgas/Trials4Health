@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Trials4Health.Controllers
 {
+   
     public class HomeController : Controller
     {
         public IActionResult Index()
@@ -32,14 +33,24 @@ namespace Trials4Health.Controllers
             ViewData["Message"] = "Primeiros Socorros";
 
             return View();
+       
+        
         }
+
+        public IActionResult Ataque()
+        {
+            ViewData["Message"] = "Ataque";
+
+            return View();
+        }
+      
 
         public IActionResult Requesitos()
         {
             ViewData["Message"] = "Requesitos,Equipamentos e Cuidados a ter";
 
-            return View();
-        }
+        return View();
+    }
 
 
         public IActionResult Contact()
@@ -53,5 +64,27 @@ namespace Trials4Health.Controllers
         {
             return View();
         }
+
+        public IActionResult Desmaios()
+        {
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+        public IActionResult Entorses()
+        {
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+        public IActionResult Hiportemia()
+        {
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+
+
     }
 }
