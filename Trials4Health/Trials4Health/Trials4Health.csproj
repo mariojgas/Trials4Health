@@ -19,6 +19,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Lista\" />
+    <Content Remove="Views\Home\ParagemCardiorespiratoria.cshtml" />
+    <Content Remove="Views\Home\Hipoglicemia.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Hipoglicemia.cshtml" />
+    <None Remove="Views\Home\ola.cshtml" />
+    <None Remove="Views\Home\Hipoglicemia.cshtml" />
   </ItemGroup>
 </Project>

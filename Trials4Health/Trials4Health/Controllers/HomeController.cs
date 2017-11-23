@@ -39,7 +39,7 @@ namespace Trials4Health.Controllers
 
         public IActionResult Ataque()
         {
-            ViewData["Message"] = "Ataque";
+            ViewData["Message"] = "O que fazer em caso de Ataque?";
 
             return View();
         }
@@ -67,24 +67,23 @@ namespace Trials4Health.Controllers
 
         public IActionResult Desmaios()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "O que fazer em caso de desmaio?";
 
             return View();
         }
         public IActionResult Entorses()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "O que fazer em caso de Entorses?";
 
             return View();
         }
         public IActionResult Hiportemia()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "O que fazer em caso de Hiportemia?";
 
             return View();
         }
-
-
-
+   
+     
     }
 }
