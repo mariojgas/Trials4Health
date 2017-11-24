@@ -7,8 +7,10 @@
     <title>@ViewData["Title"] - Trials4Health</title>
 
     <environment names="Development">
+
+        <link rel="stylesheet" href="~/theme/style.css"/>
         <link rel="stylesheet" href="~/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
+        <!--<link rel="stylesheet" href="~/css/site.css" />-->
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="~/css/bootstrap.min.css">
@@ -34,6 +36,7 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Estatistica">Estatisticas</a></li>
                 </ul>
             </div>
         </div>

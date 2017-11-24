@@ -1,0 +1,65 @@
+﻿@model IEnumerable<SOS>
+@{
+    ViewData["Title"] = "Desmaios";
+}
+<div class="panel panel-info" style="margin-top:28px;">
+
+    <div class="panel-heading">
+
+        <h1 class="panel-title">@ViewData["Title"]</h1>
+
+    </div>
+    <div class=" panel-body" style="vertical-align: middle;">
+
+        <div style="float:left;">
+
+            <li><a asp-controler="PrimeirosSocorros" asp-action="Entorses">Entorses</a></li>
+
+            <li><a asp-controler="PrimeirosSocorros" asp-action="Ataque">Ataque</a></li>
+
+            <li><a asp-controler="PrimeirosSocorros" asp-action="Hiportemia">Hiportemia</a></li>
+
+        </div>
+
+        <div style="float:right; width: 80%;">
+
+            <div class="panel panel-body">
+
+
+                <div class="panel-body">
+                    @{
+
+
+                        foreach (SOS t in Model)
+                        {
+                            if (t.Nome.Equals(ViewData["Title"]))
+                            {
+                                <div style="color:white;opacity:1;">
+
+                                    <div>
+                                        Descrição:
+                                        <br />
+                                        @t.Descriçao
+                                    </div>
+                                    <br />
+                                    <div>
+                                        O que fazer:
+                                        <br />
+                                        @t.Tecnicas
+                                    </div>
+                                </div>
+
+
+
+                            }
+                        }
+                    }
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

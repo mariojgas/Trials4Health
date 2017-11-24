@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Trials4Health.Models;
+using Trials4Health.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Trials4Health
 {
@@ -29,6 +32,14 @@ namespace Trials4Health
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddTransient<RepositorioTrails, RepositorioFalsoTemp>();//mudar para RepositorioDbTrilhos
+
+            /*services.AddDbContext<ApplicationDbContext>(
+                options => options.UseSqlServer(
+                    Configuration.GetConnectionString("ConnectionStringTrials4Health")
+                )
+            );*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +66,7 @@ namespace Trials4Health
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            //SeedData.EnsurePopulated(app.ApplicationServices);
         }
     }
 }

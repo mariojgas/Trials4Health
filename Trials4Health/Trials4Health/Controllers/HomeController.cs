@@ -3,26 +3,78 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Trials4Health.Models;
 
 namespace Trials4Health.Controllers
 {
+
     public class HomeController : Controller
     {
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult About()
-        {
             ViewData["Message"] = "O que é Trials4Health?";
+            return View();
+        }
+
+        public IActionResult PrimeirosSocorros()
+        {
+            ViewData["Message"] = "Primeiros Socorros";
+
+            return View();
+
+
+        }
+        public IActionResult Requisitos()
+        {
+            ViewData["Message"] = "Requisitos";
+            return View();
+        }
+
+        public IActionResult Ataque()
+        {
+            ViewData["Message"] = "O que fazer em caso de Ataque?";
+            return View();
+        }
+
+        public IActionResult Equipamentos()
+        {
+            ViewData["Message"] = "Equipamentos";
 
             return View();
         }
 
-        public IActionResult Contact()
+        [HttpGet]
+        public IActionResult Login()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Login";
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(RegExTestClass model)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("RegExOk");
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        public IActionResult Cuidados()
+        {
+            ViewData["Message"] = "Cuidados a ter";
+
+            return View();
+        }
+
+
+        public IActionResult Contactos()
+        {
+            ViewData["Message"] = "Pagina de Contactos";
 
             return View();
         }
@@ -31,5 +83,28 @@ namespace Trials4Health.Controllers
         {
             return View();
         }
+
+        private RepositorioTrails repository;
+        public HomeController(RepositorioTrails repository)
+        {
+            this.repository = repository;
+        }
+
+        public ViewResult Estatistica() => View(repository);
+        public ViewResult Desmaios() => View(repository.PrimeirosSocorros);
+        
+        public IActionResult Entorses()
+        {
+            ViewData["Message"] = "O que fazer em caso de Entorses?";
+
+            return View();
+        }
+        public IActionResult Hiportemia()
+        {
+            ViewData["Message"] = "O que fazer em caso de Hiportemia?";
+
+            return View();
+        }
     }
 }
+
