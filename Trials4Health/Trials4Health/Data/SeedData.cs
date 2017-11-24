@@ -6,26 +6,36 @@ using Trials4Health.Models;
 
 namespace Trials4Health.Data
 {
-    public class TrilhosFalsos
+    public class SeedData
     {
-        public static void DefaultTrilhos(IServiceProvider serviceProvider) {
+        public static void EnsurePopulated(IServiceProvider serviceProvider) {
             ApplicationDbContext dbContext = (ApplicationDbContext)serviceProvider.GetService(typeof(ApplicationDbContext));
             if (!dbContext.Trilhos.Any())
             {
-                CriarTrilhos(dbContext);
+                EnsurePopulated(dbContext);
             }
 
             dbContext.SaveChanges();
 
         }
-        public static void CriarTrilhos(ApplicationDbContext dbContext)
+        public static void EnsurePopulated(ApplicationDbContext dbContext)
         {
             dbContext.Trilhos.AddRange(
-                 new Trilho {Id=1,Nome="Trilho 1",Distancia=8.4,estatisticas=null },
-                 new Trilho { Id = 2, Nome = "Trilho 2", Distancia = 12.2, estatisticas = null }
+                 new Trilho { Id = 1, Nome = "Trilho 1", Distancia = 8342 },
+                 new Trilho { Id = 2, Nome = "Trilho 2", Distancia = 1222 }
 
             );
+            dbContext.trilhosPercorrido.AddRange(
+                new TrilhosPercorrido { Id = 1, calorias = 1000 /*tempo = new TimeSpan(2, 23, 0)*/ },
+                new TrilhosPercorrido { Id = 2, calorias = 1000 /*tempo = new TimeSpan(1, 55, 0)*/ },
+                new TrilhosPercorrido { Id = 3, calorias = 1300 /*tempo = new TimeSpan(2, 44, 0)*/ },
+                new TrilhosPercorrido { Id = 4, calorias = 1250 /*tempo = new TimeSpan(1, 2, 0)*/ },
+                new TrilhosPercorrido { Id = 5, calorias = 1350 /*tempo = new TimeSpan(1, 23, 0)*/ }
+                );
+            
         }
+
+        
     }
 }
 /*Para orientar

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Trials4Health.Models;
 
 namespace Trials4Health.Controllers
 {
@@ -31,5 +32,22 @@ namespace Trials4Health.Controllers
         {
             return View();
         }
+        public IActionResult Estatisticas()
+        {
+            return View();
+        }
+     
+        private RepositorioTrails repository;
+        public HomeController(RepositorioTrails repository)
+            {
+                this.repository = repository;
+            }
+
+        public ViewResult Estatistica => View(repository);
+
+
+        
     }
-}
+
+    }
+

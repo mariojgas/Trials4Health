@@ -14,6 +14,13 @@ namespace Trials4Health.Data
             this.context = context;
         }
         public IEnumerable<Trilho> Trilhos => context.Trilhos;
+        public IEnumerable<TrilhosPercorrido> trilhosPercorrido => context.trilhosPercorrido;
 
+        public IEnumerable<TrilhosPercorrido> TrilhosPercorrido => throw new NotImplementedException();
+
+        public IEnumerable<Turista> Turistas => context.Turistas;
+
+
+       
     }
 }

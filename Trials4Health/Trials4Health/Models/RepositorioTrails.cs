@@ -7,8 +7,8 @@ namespace Trials4Health.Models
 {
     public interface RepositorioTrails
     {
-        public IEnumerable <Trilho> Trilhos { get; set; }
-        public IEnumerable<Historico> Historicos { get; set; }
-        public IEnumerable<Utilizador> Utilizadores { get; set; }
+         IEnumerable <Trilho> Trilhos { get;}
+         IEnumerable<TrilhosPercorrido>TrilhosPercorrido  { get; }
+         IEnumerable<Turista> Turistas { get; }
     }
 }

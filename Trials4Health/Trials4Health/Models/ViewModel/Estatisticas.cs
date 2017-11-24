@@ -13,7 +13,7 @@ namespace Trials4Health.Models
         public Estatisticas()
         {
             caloriasMedias = 0;
-            tempoMedio = new Tempo(0, 0, 0);
+            tempoMedio = new TimeSpan(0, 0, 0);
             totalTempo = 0;
             totalCal = 0;
             totalIdade = 0;
@@ -24,7 +24,7 @@ namespace Trials4Health.Models
             distancia = 0;
         }
 
-        public void addDados(DadosPessoais dados)
+        /*public void addDados(DadosPessoais dados)
         {
             //incrementar o número de Pessoas
             nPessoas++;
@@ -49,9 +49,31 @@ namespace Trials4Health.Models
             //velocidade Média em metros por segundos
             velocidadeMedia = distancia / (float)segundosMedios;
 
+        }*/
+        public void gerarEstatisticas(TrilhosPercorrido trilhosPercorrido,int idade) {
+
+            //Tempo Médio
+            totalTempo = trilhosPercorrido.tempo.Hours * 3600 + trilhosPercorrido.tempo.Minutes * 60 + trilhosPercorrido.tempo.Seconds;
+            long segundosMedios = totalTempo / nPessoas;
+            tempoMedio = new TimeSpan(segundosMedios);
+
+
+            //calorias Médias
+            totalCal += trilhosPercorrido.calorias;
+            caloriasMedias = totalCal / nPessoas;
+
+            //Idade Minima e máxima
+            totalIdade += idade;
+            if (idadeMax < idade)
+                idadeMax = idade;
+            else if (idadeMin > idade)
+                idadeMin = idade;
+
+            //velocidade Média em metros por segundos
+            velocidadeMedia = (float)distancia / (float)segundosMedios;
         }
         public float caloriasMedias { get; set; }
-        public Tempo tempoMedio { get; set; }
+        public TimeSpan tempoMedio { get; set; }
         public int idadeMin { get; set; }
         public int idadeMax { get; set; }
         public long totalTempo { get; set; }
@@ -59,6 +81,7 @@ namespace Trials4Health.Models
         public long totalIdade { get; set; }
         public int idadeMedia { get; set; }
         public float velocidadeMedia { get; set; }
-        public float distancia { get; set; }
+        public decimal distancia { get; set; }
+
     }
 }
