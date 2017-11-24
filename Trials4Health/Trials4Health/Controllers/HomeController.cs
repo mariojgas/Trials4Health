@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Trials4Health.Models;
 
 namespace Trials4Health.Controllers
 {
@@ -20,7 +21,7 @@ namespace Trials4Health.Controllers
 
             return View();
         }
-        
+
         public IActionResult PrimeirosSocorros()
         {
             ViewData["Message"] = "Primeiros Socorros";
@@ -42,11 +43,25 @@ namespace Trials4Health.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Login()
         {
             ViewData["Message"] = "Login";
 
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(RegExTestClass model)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("RegExOk");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         public IActionResult Cuidados()
