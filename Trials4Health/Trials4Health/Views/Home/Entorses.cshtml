@@ -20,30 +20,40 @@
 
            </div>
             
-        <div style="float:right;  height: 250px; width: 60%;" >
+            <div style="float:right; width: 80%;">
 
-            <div class="panel panel-body" >
+                <div class="panel panel-body">
 
 
-                <div class = "panel-body">
+                    <div class="panel-body">
+                        @{
 
-                    <h5>
 
-                    </h5>
+                            foreach (SOS t in Model.PrimeirosSocorros)
+                            {
+                                if (@t.Nome.Equals(ViewData["Title"]))
+                                {
+                                    <div>
+                                        <div>
+                                            Descrição:
+                                            <h5>@t.Descriçao</h5>
+                                        </div>
+                                        <div>
+                                            O que fazer:
+                                            @t.Tecnicas
+                                        </div>
+                                    </div>
 
-                     <p> O que fazer:</p>
 
-                     <li>Coloca a articulação traumatizada em posição confortável e num plano elevado</li>
-                     <li>Evitar que o doente faça movimentos</li>
-                     <li>As pessoas com entorses no joelho ou no tornozelo devem evitar andar;</li>
-                     <li>Aplica um saco de gelo ou uma compressa fria para reduzir a dor e o inchaço</li>
 
+                                }
+                            }
+                        }
+                    </div>
 
                 </div>
 
             </div>
-    
-        </div>
 
     </div>
 

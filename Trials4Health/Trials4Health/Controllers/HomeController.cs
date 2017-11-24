@@ -7,6 +7,7 @@ using Trials4Health.Models;
 
 namespace Trials4Health.Controllers
 {
+
     public class HomeController : Controller
     {
         public IActionResult Index()
@@ -15,24 +16,23 @@ namespace Trials4Health.Controllers
             return View();
         }
 
-        public IActionResult Estatisticas()
-        {
-            ViewData["Message"] = "Estatisticas";
-
-            return View();
-        }
-
         public IActionResult PrimeirosSocorros()
         {
             ViewData["Message"] = "Primeiros Socorros";
 
             return View();
-        }
 
+
+        }
         public IActionResult Requisitos()
         {
             ViewData["Message"] = "Requisitos";
+            return View();
+        }
 
+        public IActionResult Ataque()
+        {
+            ViewData["Message"] = "O que fazer em caso de Ataque?";
             return View();
         }
 
@@ -83,22 +83,28 @@ namespace Trials4Health.Controllers
         {
             return View();
         }
-        public IActionResult Estatisticas()
-        {
-            return View();
-        }
-     
+
         private RepositorioTrails repository;
         public HomeController(RepositorioTrails repository)
-            {
-                this.repository = repository;
-            }
+        {
+            this.repository = repository;
+        }
 
-        public ViewResult Estatistica => View(repository);
-
-
+        public ViewResult Estatistica() => View(repository);
+        public ViewResult Desmaios() => View(repository.PrimeirosSocorros);
         
-    }
+        public IActionResult Entorses()
+        {
+            ViewData["Message"] = "O que fazer em caso de Entorses?";
 
+            return View();
+        }
+        public IActionResult Hiportemia()
+        {
+            ViewData["Message"] = "O que fazer em caso de Hiportemia?";
+
+            return View();
+        }
     }
+}
 

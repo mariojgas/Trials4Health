@@ -19,8 +19,9 @@ namespace Trials4Health.Data
         //public IEnumerable<TrilhosPercorrido> TrilhosPercorridos => throw new NotImplementedException();
 
         public IEnumerable<Turista> Turistas => context.Turistas;
+        public IEnumerable<SOS> PrimeirosSocorros => context.PrimeirosSocorros;
 
 
-       
+
     }
 }
