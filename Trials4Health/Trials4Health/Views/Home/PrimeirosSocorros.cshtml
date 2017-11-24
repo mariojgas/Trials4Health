@@ -2,45 +2,33 @@
     ViewData["Title"] = "Primeiros Socorros";
 }
 
+<div class = "panel panel-info" style="margin-top:28px;">
+
+	<div class = "panel-heading">
+
+		<h1 class = "panel-title">@ViewData["Title"]</h1>
+
+	</div>   
+
+	<div class="panel panel-body" >
+
+		<ul style="list-style-type:circle">
 
 
-
-	 <div class = "panel panel-info" style="margin-top:28px;">
-                    <div class = "panel-heading">
-                        <h1 class = "panel-title">@ViewData["Title"]</h1>
-                    </div>
-<!--    <div class=" panel-title" style="margin:20px;"><h1>@ViewData["Title"]</h1></div>-->
+			<li><a asp-controler="Home" asp-action="Desmaios">Desmaios</a></li>
 
 
+			<li><a asp-controler="Home" asp-action="Ataque">Ataque</a></li>
 
- <div class="panel panel-body" >
 
-                           
+			<li><a asp-controler="Home" asp-action="Entorses">Entorses</a></li>
 
-               
 
-		
-        
+			<li><a asp-controler="Home" asp-action="Hiportemia">Hiportemia</a></li>
 
-              
+		</ul>       
 
-                    <ul style="list-style-type:circle">
+	</div>
 
-                        <li><a asp-controler="Home" asp-action="Desmaios">Desmaios</a></li>
-
-                        <li><a asp-controler="Home" asp-action="Ataque">Ataque</a></li>
-
-                        <li><a asp-controler="Home" asp-action="Entorses">Entorses</a></li>
-
-                        <li><a asp-controler="Home" asp-action="Hiportemia">Hiportemia</a></li>
-
-                    </ul> 
-             
-		   
-    
-	
-             
-            </div>
-         
-
+</div>
     

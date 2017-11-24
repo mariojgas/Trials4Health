@@ -12,6 +12,7 @@ namespace Trials4Health.Models
         int ID_SOS { get; set; }
         string Nome_SOS { get; set; }
         string Descrição { get; set; }
+        string Tecnicas { get; set; }
 
     }
 }
