@@ -3,52 +3,15 @@
 }
 
 
-<div>
-    <center>
-        <h2>Trials 4 Health</h2>
-        <div id="myCarousel" class="carousel slide" data-wrap="true" data-ride="carousel" style="width:400px;height:400px;">
+<div style="margin:20px;" class="panel panel-primary ">
+    <div class="panel-heading">
+        <h1 class=" panel-title">@ViewData["Title"]</h1>
+    </div>
+    <div class="panel-body">
+        <h4>@ViewData["Message"]</h4>
 
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
-                <li data-target="#myCarousel" data-slide-to="4"></li>
-                <li data-target="#myCarousel" data-slide-to="5"></li>
-            </ol>
-
-            <div class="carousel-inner">
-                <div class="item active">
-                    <script>window.getElementById('background').setValue('background-image', '~/images/imgcar');</script>
-                </div>
-                <div class="item">
-                    <script>window.getElementById('background').setValue('background-image', '~/images/imgcar1');</script>
-                </div>
-                <div class="item">
-                    <script>window.getElementById('background').setValue('background-image', '~/images/imgcar2');</script>
-                </div>
-                <div class="item">
-                    <script>window.getElementById('background').setValue('background-image', '~/images/imgcar3');</script>
-                </div>
-                <div class="item">
-                    <script>window.getElementById('background').setValue('background-image', '~/images/imgcar4');</script>
-                </div>
-                <div class="item">
-                    <script>window.getElementById('background').setValue('background-image', '~/images/imgcar5');</script>
-                </div>
-            </div>
-
-            <div style="position:absolute;top:40%;width:100%;">
-                <a class="carousel-control left" style="position:absolute !important;" href="#myCarousel" data-slide="prev">
-                    <i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></i>
-                </a>
-                <a class="carousel-control right" style="position:absolute !important;" href="#myCarousel" data-slide="next">
-                    <i class="fa fa-chevron-circle-right fa-2x" aria-hidden="true"></i>
-                </a>
-            </div>
-        </div>
-    </center>
+        <p>Trials4Health é uma aplicação para o telemovel desenvolvido pelo Instituto Politécnico da Guarda, Instituto Politécnico de Bragança e a Startup Kinematix Sense, que reúnem uma equipa interdisciplinar constituída por especialistas na área das Ciências da Computação, Ciências do Desporto, Engenharia Biomédica e na prática de desportos outdoor.</p>
+        <p>Esta Aplicação foi desenvolvida com o objetivo de auxiliar o utilizador a percorrer trilhos na serra da Estrela, tal como a recomendação de trilhos de acordo com a condição física do utilizador, a indicação do esforço cardiaco e gasto energético, o impacto muscular e articular. </p>
+        Também indica ao utilizador a sua localização, o trilho a percorrer, pontos de interesse que estejam próximos dele e a fauna da área.
+    </div>
 </div>
-
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>  

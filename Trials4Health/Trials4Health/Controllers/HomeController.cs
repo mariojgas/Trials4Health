@@ -10,13 +10,7 @@ namespace Trials4Health.Controllers
     {
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult About()
-        {
             ViewData["Message"] = "O que é Trials4Health?";
-
             return View();
         }
 
@@ -26,7 +20,7 @@ namespace Trials4Health.Controllers
 
             return View();
         }
-
+        
         public IActionResult PrimeirosSocorros()
         {
             ViewData["Message"] = "Primeiros Socorros";
@@ -36,15 +30,36 @@ namespace Trials4Health.Controllers
 
         public IActionResult Requisitos()
         {
-            ViewData["Message"] = "Requesitos,Equipamentos e Cuidados a ter";
+            ViewData["Message"] = "Requisitos";
+
+            return View();
+        }
+
+        public IActionResult Equipamentos()
+        {
+            ViewData["Message"] = "Equipamentos";
+
+            return View();
+        }
+
+        public IActionResult Login()
+        {
+            ViewData["Message"] = "Login";
+
+            return View();
+        }
+
+        public IActionResult Cuidados()
+        {
+            ViewData["Message"] = "Cuidados a ter";
 
             return View();
         }
 
 
-        public IActionResult Contact()
+        public IActionResult Contactos()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Pagina de Contactos";
 
             return View();
         }

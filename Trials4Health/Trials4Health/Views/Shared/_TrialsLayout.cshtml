@@ -1,47 +1,100 @@
-﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+﻿<!-- inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Unicorn | Responsive one page HTML template</title>
+    <title>Trials4Health - ViewData["Title"]</title>-->
+<!-- Google Fonts
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,900' rel='stylesheet' type='text/css'> -->
+<!-- Bootstrap css form cdn
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+<!-- Font awesome css
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
 
-    <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,900' rel='stylesheet' type='text/css'>
-    <!-- Bootstrap css form cdn -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Trials4Health</title>
 
-    <!-- Font awesome css -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <environment names="Development">
+        <link rel="stylesheet" href="~/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/theme/css/animate.css">
+        <link rel="stylesheet" href="~/theme/css/linecons.css">
+        <link rel="stylesheet" href="~/theme/inc/strip/css/strip.css">
+        <link rel="stylesheet" href="~/theme/css/owl.carousel.css">
+        <link rel="stylesheet" href="~/theme/style.css">
+        <link rel="stylesheet" href="~/theme/css/responsive.css">
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="~/css/bootstrap.min.css">
+        <link rel="stylesheet" href="~/theme/css/animate.css">
+        <link rel="stylesheet" href="~/theme/css/linecons.css">
+        <link rel="stylesheet" href="~/theme/inc/strip/css/strip.css">
+        <link rel="stylesheet" href="~/theme/css/owl.carousel.css">
+        <link rel="stylesheet" href="~/theme/style.css">
+        <link rel="stylesheet" href="~/theme/css/responsive.css">
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-    <link rel="stylesheet" href="~/theme/css/animate.css">
-    <link rel="stylesheet" href="~/theme/css/linecons.css">
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <script src="~/theme/js/jquery.counterup.min.js"></script>
+        <script src="~/theme/js/jquery.sticky.js"></script>
+        <script src="~/theme/inc/strip/js/strip.pkgd.min.js"></script>
+        <script src="~/theme/js/jquery.easing.1.3.min.js"></script>
+        <script src="~/theme/js/jquery.tweet.min.js"></script>
+        <script src="~/theme/js/owl.carousel.min.js"></script>
+        <script src="~/theme/js/isotope.pkgd.min.js"></script>
+        <script src="~/theme/js/wow.min.js"></script>
+        <!--[if !IE]><!-->
+        <script type="text/javascript">new WOW().init();</script>
+        <!--<![endif]-->
+        <!--[if gte IE 9]>
+        <script type="text/javascript">new WOW().init();</script>
+        <![endif]-->
+        <!--[if lte IE 8]>
+            <script type="text/javascript" src="js/ie-opacity-polyfill.js"></script>
+        <![endif]-->
+        <script src="js/main.js"></script>
 
-    <link rel="stylesheet" href="~/theme/inc/strip/css/strip.css">
-
-    <!-- Owl carousel 2 css -->
-    <link rel="stylesheet" href="~/theme/css/owl.carousel.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="~/theme/style.css">
-    <link rel="stylesheet" href="~/theme/css/responsive.css">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <script asp-fallback-src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script asp-fallback-src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+    @Html.Raw(JavaScriptSnippet.FullScript)
 </head>
 
 <body>
-
-
     <header class="header">
-        <div class="container">
+        <div class="container" style="width:100%">
             <div class="row">
                 <div class="col-sm-2">
-                    <div class="logo">
+                    <div class="logo" style="margin-top:-35px;">
                         <h1><a asp-action="Index" asp-controller="Home">Trails4Health</a></h1>
 
                         <div class="navbar-header">
@@ -55,16 +108,18 @@
                     </div>
                 </div>
 
-                <div class="col-sm-10">
+                <div class="col-sm-9" style="margin-left:60px;margin-top:-35px">
 
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right text-uppercase">
                             <li class="active" style="a:hover{background-color:white !important; opacity:100 !important;}"><a asp-action="Index" asp-controller="Home">Home</a></li>
                             <li><a asp-action="Estatisticas" asp-controller="Home">Estatisticas</a></li>
-                            <li><a asp-action="PrimeirosSocorros" asp-controller="Home">Primeiros Socorros</a></li>
                             <li><a asp-action="Requisitos" asp-controller="Home">Requisitos</a></li>
-                            <li><a asp-action="About" asp-controller="Home">About</a></li>
-                            <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
+                            <li><a asp-action="Equipamentos" asp-controller="Home">Equipamentos</a></li>
+                            <li><a asp-action="Cuidados" asp-controller="Home">Cuidados a ter</a></li>
+                            <li><a asp-action="PrimeirosSocorros" asp-controller="Home">Primeiros Socorros</a></li>
+                            <li><a asp-action="Contactos" asp-controller="Home">Contactos</a></li>
+                            <li><a asp-action="Login" asp-controller="Home">Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -74,235 +129,56 @@
 
     <section id="slider">
 
-        <div data-velocity="-.2" class="overlay-bg slide-bg" id="background"></div>
-        <div class="container">
-            <div id="myCarousel" class="carousel slide" data-wrap="true" data-ride="carousel">
-
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                    <li data-target="#myCarousel" data-slide-to="4"></li>
-                    <li data-target="#myCarousel" data-slide-to="5"></li>
-                </ol>
-
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <script type="text/javascript">document.getElementById('background').style.backgroundImage = "url('"+Server.MapPath("~/images/imgcar0")+')";</script>
-                    </div>
-                    <div class="item">
-                        <script type="text/javascript">document.getElementById('background').style.backgroundImage = "url('" + Server.MapPath("~/images/imgcar1") + ')";</script>
-                    </div>
-                    <div class="item">
-                        <script type="text/javascript">document.getElementById('background').style.backgroundImage = "url('" + Server.MapPath("~/images/imgcar2") + ')";</script>
-                    </div>
-                    <div class="item">
-                        <script type="text/javascript">document.getElementById('background').style.backgroundImage = "url('" + Server.MapPath("~/images/imgcar3") + ')";</script>
-                    </div>
-                    <div class="item">
-                        <script type="text/javascript">document.getElementById('background').style.backgroundImage = "url('" + Server.MapPath("~/images/imgcar4") + ')";</script>
-                    </div>
-                    <div class="item">                        
-                        <script type="text/javascript">document.getElementById('background').style.backgroundImage = "url('" +Server.MapPath("~/images/imgcar5") + ')";</script>
-                    </div>
-                </div>
+        <div data-velocity="-.2" class="overlay-bg slide-bg" style="background-image:url('/images/imgcar3.jpg')">
+            <div class="container" style="margin-top:100px;">
+                @RenderBody()
             </div>
         </div>
 
     </section> <!-- End slider -->
 
 
-    <footer id="footer" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="footer-contact">
-                        <h2>Unicorn</h2>
-                        <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his</p>
+    <footer id="footer" class="section-padding" style="height:170px;margin-top:-20px">
+        <div class="container" style="margin-top:-30px;">
+            <div style="width:100%;">
+                <div class="row" style="margin-top:-30px;">
+                    <div class="col-md-12" style="margin-top:10px;margin-bottom:-40px">
+                        <h2>Links</h2>
+                        <table class="table" style="background-color:transparent">
+                            <tr>
+                                <td><a asp-action="Index" asp-controller="Home">Home</a></td>
+                                <td><a asp-action="Estatisticas" asp-controller="Home">Estatisticas</a></td>
+                                <td><a asp-action="Requisitos" asp-controller="Home">Requisitos</a></td>
+                                <td><a asp-action="Equipamentos" asp-controller="Home">Equipamentos</a></td>
+                                <td><a asp-action="Cuidados" asp-controller="Home">Cuidados a ter</a></td>
+                                <td><a asp-action="PrimeirosSocorros" asp-controller="Home">Primeiros Socorros</a></td>
+                                <td><a asp-action="Contactos" asp-controller="Home">Contactos</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
 
-                        <div class="footer-ct-form">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p><input type="text" placeholder="NAME"></p>
-                                </div>
-                                <div class="col-md-6">
-                                    <p><input type="text" placeholder="EMAIL"></p>
-                                </div>
-                            </div>
-                            <p><input type="text" placeholder="SUBJECT"></p>
-                            <p><textarea name="message" placeholder="MESSAGE" id="message" cols="30" rows="10"></textarea></p>
-                            <p><input type="submit" value="Send"></p>
+
+                <div class="row" style="margin-top:-30px;">
+                    <div class="col-md-12">
+                        <div class="footer-sep"></div>
+                    </div>
+                    <div class="col-md-5 table" style="margin-top:-30px;">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="">TERMS</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a asp-action="Contactos" asp-controller="Home">Contactos</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-2 col-md-offset-1 col-sm-4">
-                    <div class="footer-widget">
-                        <h2>Links</h2>
-                        <ul>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Services</a></li>
-                            <li><a href="">Menu</a></li>
-                            <li><a href="">Restaurants</a></li>
-                            <li><a href="">Work Hours</a></li>
-                            <li><a href="">Call Hours </a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-2 col-sm-4">
-                    <div class="footer-widget">
-                        <h2>friends</h2>
-                        <ul>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Services</a></li>
-                            <li><a href="">Menu</a></li>
-                            <li><a href="">Restaurants</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-2 col-sm-4">
-                    <div class="footer-widget">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="">Facebook</a></li>
-                            <li><a href="">Twitter</a></li>
-                            <li><a href="">Github</a></li>
-                            <li><a href="">Pinterest</a></li>
-                            <li><a href="">Google Plus</a></li>
-                            <li><a href="">Dribble</a></li>
-                            <li><a href="">Flickr</a></li>
-                            <li><a href="">Others</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="footer-sep"></div>
-                </div>
-                <div class="col-md-7">
-                    <div class="footer-copyright">
-                        <p>One morning, when Gregor Samsa woke from troubled dreams, he found.<br /> © 2015 Your Awesome Company <span class="seprator">|</span> Designed by <a href="http://hasin.wordpress.com">Hasin</a> <span class="seprator">|</span> Coded with <i class="fa fa-heart"></i> by <a href="http://wpexpand.com" target="_blank">WP Expand</a></p>
-                    </div>
-                </div>
-
-                <div class="col-md-5">
-                    <div class="footer-menu">
-                        <ul>
-                            <li><a href="">TERMS</a></li>
-                            <li><a href="">Privacy Policy</a></li>
-                            <li><a href="">Contact</a></li>
-                            <li><a href="">Job</a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
-    </footer> <!-- End footer -->
-    <!-- jQuery form CDN -->
-    <script src="https://code.jquery.com/jquery.min.js"></script>
+    </footer>
 
-    <!-- Bootstrap form CDN -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-    <!-- jQuery Counterup -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script src="~/theme/js/jquery.counterup.min.js"></script>
-
-    <!-- jQuery sticky -->
-    <script src="~/theme/js/jquery.sticky.js"></script>
-
-    <!-- jQuery Strip Lightbox -->
-    <script src="~/theme/inc/strip/js/strip.pkgd.min.js"></script>
-
-    <!-- jQuery easing -->
-    <script src="~/theme/js/jquery.easing.1.3.min.js"></script>
-
-    <!-- jQuery tweet -->
-    <script src="~/theme/js/jquery.tweet.min.js"></script>
-
-    <!-- jQuery owl carousel -->
-    <script src="~/theme/js/owl.carousel.min.js"></script>
-
-    <!-- jQuery isotope filder -->
-    <script src="~/theme/js/isotope.pkgd.min.js"></script>
-
-    <!-- WOW Animation -->
-    <script src="~/theme/js/wow.min.js"></script>
-    <!--Activating WOW Animation only for modern browser-->
-    <!--[if !IE]><!-->
-    <script type="text/javascript">new WOW().init();</script>
-    <!--<![endif]-->
-    <!--Oh Yes, IE 9+ Supports animation, lets activate for IE 9+-->
-    <!--[if gte IE 9]>
-        <script type="text/javascript">new WOW().init();</script>
-    <![endif]-->
-    <!--Opacity & Other IE fix for older browser-->
-    <!--[if lte IE 8]>
-        <script type="text/javascript" src="js/ie-opacity-polyfill.js"></script>
-    <![endif]-->
-    <!-- jQuery main script -->
-    <script src="js/main.js"></script>
-</body>
-</html>
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Trials4Health</title>
-
-    <environment names="Development">
-        <link rel="stylesheet" href="~/css/bootstrap.css" asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.css" asp-fallback-href-include="~/lib/bootstrap/dist/css/bootstrap-theme.css" />
-        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
-    </environment>
-    <environment names="Staging,Production">
-        <link rel="stylesheet" href="~/css/bootstrap.min.css" asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-fallback-href-include="~/lib/bootstrap/dist/css/bootstrap-theme.min.css" />
-        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
-    </environment>
-    @Html.Raw(JavaScriptSnippet.FullScript)
-
-</head>
-
-
-
-<body>
-    <nav class="nav navbar-default">
-        <div class="navbar-header">
-            <ul class="nav navbar-nav">
-                <li><a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                <li><a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Estatisticas">Estatisticas</a></li>
-                <li><a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Requesitos">Requesitos,Equipamentos e Cuidados a ter</a></li>
-                <li><a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="PrimeirosSocorros">Primeiros Socorros</a></li>
-                <li><a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="About">Sobre</a></li>
-                <li><a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Contact">Contactos</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container body-content" style="width:100% !important">
-        @RenderBody()
-    </div>
-    <environment names="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    <environment names="Staging,Production">
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>  
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
-
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
--->
