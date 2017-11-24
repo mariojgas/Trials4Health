@@ -83,5 +83,22 @@ namespace Trials4Health.Controllers
         {
             return View();
         }
+        public IActionResult Estatisticas()
+        {
+            return View();
+        }
+     
+        private RepositorioTrails repository;
+        public HomeController(RepositorioTrails repository)
+            {
+                this.repository = repository;
+            }
+
+        public ViewResult Estatistica => View(repository);
+
+
+        
     }
-}
+
+    }
+

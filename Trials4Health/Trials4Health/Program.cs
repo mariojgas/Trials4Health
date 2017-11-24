@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace Trials4Health
 {
@@ -20,6 +22,9 @@ namespace Trials4Health
                 .Build();
 
             host.Run();
+            
         }
+        
     }
 }
+
