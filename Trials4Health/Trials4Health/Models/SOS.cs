@@ -19,10 +19,10 @@ namespace Trials4Health.Models
     public class SOS
     {
 
-        int ID_SOS { get; set; }
-        string Nome { get; set; }
-        string Descriçao { get; set; }
-        string Tecnicas { get; set; }
+        public int ID_SOS { get; set; }
+        public string Nome { get; set; }
+        public string Descriçao { get; set; }
+        public string Tecnicas { get; set; }
 
     }
 }

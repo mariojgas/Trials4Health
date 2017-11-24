@@ -22,6 +22,9 @@ namespace Trials4Health.Models
             idadeMin = 999;
             velocidadeMedia = 0;
             distancia = 0;
+            totalminutos = 0;
+            totalhoras = 0;
+            totalsegundos = 0;
         }
 
         /*public void addDados(DadosPessoais dados)
@@ -51,13 +54,18 @@ namespace Trials4Health.Models
 
         }*/
         public void gerarEstatisticas(TrilhosPercorrido trilhosPercorrido,int idade) {
-
+            nPessoas++;
             //Tempo Médio
-            totalTempo = trilhosPercorrido.tempo.Hours * 3600 + trilhosPercorrido.tempo.Minutes * 60 + trilhosPercorrido.tempo.Seconds;
-            long segundosMedios = totalTempo / nPessoas;
-            tempoMedio = new TimeSpan(segundosMedios);
+            totalTempo += trilhosPercorrido.tempo.Hours * 3600 + trilhosPercorrido.tempo.Minutes * 60 + trilhosPercorrido.tempo.Seconds;
+            totalsegundos += trilhosPercorrido.tempo.Seconds;
+            totalminutos += trilhosPercorrido.tempo.Minutes;
+            totalhoras += trilhosPercorrido.tempo.Hours;
+            int segundosMedios = totalTempo / nPessoas;
+            tempoMedio = new TimeSpan(totalhoras/nPessoas,totalminutos/nPessoas,totalsegundos/nPessoas);
+            
+            
 
-
+            
             //calorias Médias
             totalCal += trilhosPercorrido.calorias;
             caloriasMedias = totalCal / nPessoas;
@@ -68,7 +76,7 @@ namespace Trials4Health.Models
                 idadeMax = idade;
             else if (idadeMin > idade)
                 idadeMin = idade;
-
+            idadeMedia = totalIdade / nPessoas;
             //velocidade Média em metros por segundos
             velocidadeMedia = (float)distancia / (float)segundosMedios;
         }
@@ -76,12 +84,14 @@ namespace Trials4Health.Models
         public TimeSpan tempoMedio { get; set; }
         public int idadeMin { get; set; }
         public int idadeMax { get; set; }
-        public long totalTempo { get; set; }
+        public int totalTempo { get; set; }
         public long totalCal { get; set; }
-        public long totalIdade { get; set; }
+        public int totalIdade { get; set; }
         public int idadeMedia { get; set; }
         public float velocidadeMedia { get; set; }
         public decimal distancia { get; set; }
-
+        public int totalhoras { get; set; }
+        public int totalminutos { get; set; }
+        public int totalsegundos { get; set; }
     }
 }

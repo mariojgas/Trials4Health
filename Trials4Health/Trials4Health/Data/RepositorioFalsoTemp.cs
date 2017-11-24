@@ -29,6 +29,6 @@ namespace Trials4Health.Data
             new Turista {Id=3,Nome="Marcia",Idade=24 }
         };
 
-        public IEnumerable<TrilhosPercorrido> TrilhosPercorrido => throw new NotImplementedException();
+       // public IEnumerable<TrilhosPercorrido> TrilhosPercorrido => throw new NotImplementedException();
     }
 }
