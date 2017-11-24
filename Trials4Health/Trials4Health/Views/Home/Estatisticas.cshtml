@@ -1,5 +1,34 @@
-﻿@{
-    ViewData["Title"] = "Estatisticas";
-}
+﻿
+@model RepositorioTrails
 
-<div></div>
+    @{
+        ViewData["Title"] = "Estatisticas";
+    }
+
+    <h2>Estatisticas</h2>
+@{ 
+    
+
+    foreach (Trilho t in Model.Trilhos)
+    {
+        Estatisticas estatisticas = new Estatisticas();
+        estatisticas.distancia = t.Distancia;
+        foreach (TrilhosPercorrido tp in Model.TrilhosPercorrido)
+        {
+            if (tp.IdTrilho == t.Id)
+            {
+                foreach(Turista tu in Model.Turistas) {
+                    if (tp.IdTurista == tu.Id)
+                    {
+                        estatisticas.gerarEstatisticas(tp,tu.Idade);
+
+                    }
+
+                }
+
+            }
+        }
+        <h3>@t.Nome</h3>
+
+    }
+}
