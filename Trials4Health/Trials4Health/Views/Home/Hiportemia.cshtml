@@ -1,47 +1,41 @@
 ﻿@{
-    ViewData["Title"] = "Hiportemia";
+    ViewData["Title"] = "Hipotermia";
 }
+<div class = "panel panel-info" style="margin-top:28px;">
 
+    <div class = "panel-heading">
 
-<div class="panel panel-primary" style="margin: 20px;">
-
-    <div class=" panel-title"><h1>@ViewData["Title"]</h1></div>
-
-    <div class=" panel-body">
-
-        <div style="float:left">
-
-            <ul style="list-style-type:circle">
-
-                <li><a asp-controler="PrimeirosSocorros" asp-action="ParagemCardiorespiratoria">Paragem Cardiorespiratoria</a></li>
-
-                <li><a asp-controler="PrimeirosSocorros" asp-action="Desmaios">Desmaio</a></li>
-
-                <li><a asp-controler="PrimeirosSocorros" asp-action="Ataque">Ataque</a></li>
-
-                <li><a asp-controler="PrimeirosSocorros" asp-action="Hipoglicemia">Hipoglicemia</a></li>
+        <h1 class = "panel-title">@ViewData["Title"]</h1>
+    
+    </div>   
+        <div class=" panel-body" style="vertical-align: middle;">
+        
+           <div style="float:left;">
 
                 <li><a asp-controler="PrimeirosSocorros" asp-action="Entorses">Entorses</a></li>
 
-                <li><a asp-controler="PrimeirosSocorros" asp-action="Hiportemia">Hiportemia</a></li>
+                <li><a asp-controler="PrimeirosSocorros" asp-action="Ataque">Ataque</a></li>
 
-            </ul>
-        </div>
-        <div style="float:right">
+                <li><a asp-controler="PrimeirosSocorros" asp-action="Desmaios">Desmaios</a></li>  
 
-            <div class="panel panel-primary">
+           </div>
+            
+        <div style="float:right;  height: 250px; width: 60%;" >
 
-                <h1 style="color:white;">Hiportemia</h1>
+            <div class="panel panel-body" >
 
+
+                <div class = "panel-body">
+
+                    <h2>Informação. </h2>
+
+                </div>
 
             </div>
-
-            <div class="panel panel-body">
-
-
-
-            </div>
-
+    
         </div>
+
     </div>
+
 </div>
+      
