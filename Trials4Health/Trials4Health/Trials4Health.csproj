@@ -27,4 +27,7 @@
     <None Remove="Views\Home\ola.cshtml" />
     <None Remove="Views\Home\Hipoglicemia.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\ViewModels\" />
+  </ItemGroup>
 </Project>

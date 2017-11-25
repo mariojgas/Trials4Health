@@ -9,9 +9,11 @@ namespace Trials4Health.Models
         IEnumerable<SOS> SOSs { get; }
     }
     public class FakeSosRepository : Isosrepository {
+       
+
         public IEnumerable<SOS> SOSs => new List<SOS>
         {
-            new SOS{ Nome = "Ataque", Descriçao="OLA OLA " } 
+            new SOS{ Nome ="Ataque", De} 
         };
     }
 
@@ -21,7 +23,7 @@ namespace Trials4Health.Models
 
         int ID_SOS { get; set; }
         string Nome { get; set; }
-        string Descriçao { get; set; }
+        string Descricao { get; set; }
         string Tecnicas { get; set; }
 
     }
