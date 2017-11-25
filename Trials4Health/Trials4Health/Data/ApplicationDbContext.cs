@@ -15,6 +15,9 @@ namespace Trials4Health.Data
         public DbSet<Turista> Turistas { get; set; }
         public DbSet<SOS> PrimeirosSocorros { get; set; }
         public DbSet<TrilhosPercorrido> trilhosPercorrido { get; set; }
+        public DbSet<Equipamentos> Equipamentos { get; set; }
+        public DbSet<Cuidados> Cuidados { get; set; }
+        public DbSet<Requisitos> Requisitos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -20,6 +20,9 @@ namespace Trials4Health.Data
 
         public IEnumerable<Turista> Turistas => context.Turistas;
         public IEnumerable<SOS> PrimeirosSocorros => context.PrimeirosSocorros;
+        public IEnumerable<Equipamentos> Equipamentos => context.Equipamentos;
+        public IEnumerable<Cuidados> Cuidados => context.Cuidados;
+        public IEnumerable<Requisitos> Requisitos => context.Requisitos;
 
 
 

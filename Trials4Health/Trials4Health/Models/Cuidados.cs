@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Trials4Health.Models.ViewModel
+namespace Trials4Health.Models
 {
     public class Cuidados
     {

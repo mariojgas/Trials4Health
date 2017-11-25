@@ -29,6 +29,25 @@ namespace Trials4Health.Data
             new Turista {Id=3,Nome="Marcia",Idade=24 }
         };
 
+
+        public IEnumerable<Requisitos> Requisitos => new List<Requisitos> {
+            new Requisitos {Id=1,Nome="Guia", Descrição="O trilho necessita de guia?" },
+            new Requisitos {Id=2,Nome="GPS", Descrição="O trilho necessita de gps?" },
+            new Requisitos {Id=3,Nome="Medico", Descrição="O trilho necessita de assistencia medica?" }
+        };
+
+        public IEnumerable<Equipamentos> Equipamentos => new List<Equipamentos> {
+            new Equipamentos {Id=1,Nome="Botas de montanhismo", Descrição="Botas adequadas para montanhismo"},
+            new Equipamentos {Id=2,Nome="GPS", Descrição="Equipamento de GPS"},
+            new Equipamentos {Id=3,Nome="Kit Primeiros Socorros", Descrição="Kit de primeiros socorros para trilhos de elevada dificuldade"},
+        };
+
+        public IEnumerable<Cuidados> Cuidados => new List<Cuidados> {
+            new Cuidados {Id=1,Nome="Protetor Solar",Descrição="Trilho com bastante exposição solar"},
+            new Cuidados {Id=2,Nome="Calçado adequado",Descrição="Trilho necessita de calçado adequado"},
+            new Cuidados {Id=3,Nome="Ravinas",Descrição="Cuidado com o trilho que possui caminhos estreitos e de passagem perigosa"},
+        };
+
         public IEnumerable<SOS> PrimeirosSocorros => new List<SOS>
         {
             new SOS{ Nome = "Ataque", Descriçao="", Tecnicas="Ajudar o paciente a colocar-se na posição que lhe for mais confortável"

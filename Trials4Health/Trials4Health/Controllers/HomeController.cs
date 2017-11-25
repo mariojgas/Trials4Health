@@ -24,24 +24,13 @@ namespace Trials4Health.Controllers
 
 
         }
-        public IActionResult Requisitos()
-        {
-            ViewData["Message"] = "Requisitos";
-            return View();
-        }
 
         public IActionResult Ataque()
         {
             ViewData["Message"] = "O que fazer em caso de Ataque?";
             return View();
         }
-
-        public IActionResult Equipamentos()
-        {
-            ViewData["Message"] = "Equipamentos";
-
-            return View();
-        }
+        
 
         [HttpGet]
         public IActionResult Login()
@@ -62,13 +51,6 @@ namespace Trials4Health.Controllers
             {
                 return View();
             }
-        }
-
-        public IActionResult Cuidados()
-        {
-            ViewData["Message"] = "Cuidados a ter";
-
-            return View();
         }
 
 
@@ -92,7 +74,10 @@ namespace Trials4Health.Controllers
 
         public ViewResult Estatistica() => View(repository);
         public ViewResult Desmaios() => View(repository.PrimeirosSocorros);
-        
+        public ViewResult Cuidados() => View(repository.Cuidados);
+        public ViewResult Requisitos() => View(repository.Requisitos);
+        public ViewResult Equipamentos() => View(repository.Equipamentos);
+
         public IActionResult Entorses()
         {
             ViewData["Message"] = "O que fazer em caso de Entorses?";
