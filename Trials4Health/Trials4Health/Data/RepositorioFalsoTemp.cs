@@ -6,17 +6,17 @@ using Trials4Health.Models;
 
 namespace Trials4Health.Data
 {
-    public class RepositorioFalsoTemp : RepositorioTrails
+    /*public class RepositorioFalsoTemp : IRepositorioTrails
     {
-        public IEnumerable<TrilhosPercorrido> TrilhosPercorridos => new List<TrilhosPercorrido> {
-            new TrilhosPercorrido { Id=1,tempo=new TimeSpan(1,2,3),calorias=1005,IdTrilho=1,IdTurista=1},
-            new TrilhosPercorrido { Id=2,tempo=new TimeSpan(1,12,3),calorias=1589,IdTrilho=1,IdTurista=2 },
-            new TrilhosPercorrido { Id=3,tempo=new TimeSpan(1,44,3),calorias=1234,IdTrilho=1,IdTurista=3 },
-            new TrilhosPercorrido { Id=4,tempo=new TimeSpan(2,11,3),calorias=1700,IdTrilho=1,IdTurista=2 },
-            new TrilhosPercorrido { Id=5,tempo=new TimeSpan(2,44,3),calorias=1600,IdTrilho=2,IdTurista=2 },
-            new TrilhosPercorrido { Id=6,tempo=new TimeSpan(3,44,3),calorias=1589,IdTrilho=2,IdTurista=3 },
-            new TrilhosPercorrido { Id=7,tempo=new TimeSpan(1,44,3),calorias=1234,IdTrilho=3,IdTurista=1 },
-            new TrilhosPercorrido { Id=8,tempo=new TimeSpan(2,11,3),calorias=1700,IdTrilho=3,IdTurista=2 }
+        public IEnumerable<TrilhosPercorridos> TrilhosPercorridos => new List<TrilhosPercorridos> {
+            new TrilhosPercorridos { Id=1,tempo=new TimeSpan(1,2,3),calorias=1005,Id_Trilho=1,Id_Turista=1},
+            new TrilhosPercorridos { Id=2,tempo=new TimeSpan(1,12,3),calorias=1589,Id_Trilho=1,Id_Turista=2 },
+            new TrilhosPercorridos { Id=3,tempo=new TimeSpan(1,44,3),calorias=1234,Id_Trilho=1,Id_Turista=3 },
+            new TrilhosPercorridos { Id=4,tempo=new TimeSpan(2,11,3),calorias=1700,Id_Trilho=1,Id_Turista=2 },
+            new TrilhosPercorridos { Id=5,tempo=new TimeSpan(2,44,3),calorias=1600,Id_Trilho=2,Id_Turista=2 },
+            new TrilhosPercorridos { Id=6,tempo=new TimeSpan(3,44,3),calorias=1589,Id_Trilho=2,Id_Turista=3 },
+            new TrilhosPercorridos { Id=7,tempo=new TimeSpan(1,44,3),calorias=1234,Id_Trilho=3,Id_Turista=1 },
+            new TrilhosPercorridos { Id=8,tempo=new TimeSpan(2,11,3),calorias=1700,Id_Trilho=3,Id_Turista=2 }
         };
         public IEnumerable<Trilho> Trilhos => new List<Trilho> {
             new Trilho { Nome="Trilho 1",Id=1,Distancia=3000},
@@ -87,5 +87,5 @@ namespace Trials4Health.Data
         };
 
         // public IEnumerable<TrilhosPercorrido> TrilhosPercorrido => throw new NotImplementedException();
-    }
+    }*/
 }

@@ -9,34 +9,46 @@ namespace Trials4Health.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions options) : base(options) { }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<Trilho> Trilhos { get; set; }
         public DbSet<Turista> Turistas { get; set; }
         public DbSet<SOS> PrimeirosSocorros { get; set; }
-        public DbSet<TrilhosPercorrido> trilhosPercorrido { get; set; }
+        public DbSet<TrilhosPercorridos> trilhosPercorridos { get; set; }
         public DbSet<Equipamentos> Equipamentos { get; set; }
         public DbSet<Cuidados> Cuidados { get; set; }
         public DbSet<Requisitos> Requisitos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<TrilhosPercorridos>().ToTable("TrilhosPercorridos");
+
             // BookCategory Primary key
-            modelBuilder.Entity<TrilhosPercorrido>()
-                .HasKey(bc => new { bc.IdTrilho,bc.IdTurista });
+            modelBuilder.Entity<TrilhosPercorridos>()
+                .HasKey(bc => new { bc.TrilhosPercorridosId });
+
+            modelBuilder.Entity<Trilho>()
+                .HasKey(tri => tri.TrilhoId);
+
+            modelBuilder.Entity<Turista>()
+                .HasKey(tur => tur.TuristaId);
 
             // BookCategory Foreign keys
-            modelBuilder.Entity<TrilhosPercorrido>()
+            modelBuilder.Entity<TrilhosPercorridos>()
                 .HasOne(bc => bc.trilho)
-                .WithMany(b => b.trilhosPercorrido)
-                .HasForeignKey(bc => bc.IdTrilho);
+                .WithMany(b => b.trilhosPercorridos)
+                .HasForeignKey(bc => bc.TrilhoId);
 
-            modelBuilder.Entity<TrilhosPercorrido>()
+            modelBuilder.Entity<TrilhosPercorridos>()
                 .HasOne(bc => bc.turista)
                 .WithMany(c => c.trilhosPercorridos)
-                .HasForeignKey(bc => bc.IdTurista);
+                .HasForeignKey(bc => bc.TuristaId);
 
-           
+            /*
+            modelBuilder.Entity<Trilho>()
+                .HasMany(tri => tri.trilhosPercorridos)
+                .WithOne(tp => tp.trilho)
+                .HasForeignKey(tri => tri.IdTrilho);*/
         }
     }
 }

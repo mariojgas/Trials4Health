@@ -24,12 +24,6 @@ namespace Trials4Health.Controllers
 
 
         }
-
-        public IActionResult Ataque()
-        {
-            ViewData["Message"] = "O que fazer em caso de Ataque?";
-            return View();
-        }
         
 
         [HttpGet]
@@ -66,30 +60,20 @@ namespace Trials4Health.Controllers
             return View();
         }
 
-        private RepositorioTrails repository;
-        public HomeController(RepositorioTrails repository)
+        private IRepositorioTrails repository;
+        public HomeController(IRepositorioTrails repository)
         {
             this.repository = repository;
         }
 
         public ViewResult Estatistica() => View(repository);
         public ViewResult Desmaios() => View(repository.PrimeirosSocorros);
+        public ViewResult Entorses() => View(repository.PrimeirosSocorros);
+        public ViewResult Hipotermia() => View(repository.PrimeirosSocorros);
+        public ViewResult Ataque() => View(repository.PrimeirosSocorros);
         public ViewResult Cuidados() => View(repository.Cuidados);
         public ViewResult Requisitos() => View(repository.Requisitos);
         public ViewResult Equipamentos() => View(repository.Equipamentos);
-
-        public IActionResult Entorses()
-        {
-            ViewData["Message"] = "O que fazer em caso de Entorses?";
-
-            return View();
-        }
-        public IActionResult Hiportemia()
-        {
-            ViewData["Message"] = "O que fazer em caso de Hiportemia?";
-
-            return View();
-        }
     }
 }
 

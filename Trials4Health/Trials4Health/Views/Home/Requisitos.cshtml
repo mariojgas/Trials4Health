@@ -9,21 +9,19 @@
     </div>
 
 
-    <div class="panel-body">
+    <div class="panel-body" style="color:white;opacity:1;">
         @{
-
-
             foreach (Requisitos req in Model)
             {
 
-                <div style="color:white;opacity:1;">
+                <div>
                     <div>
                         Nome: @req.Nome
                         <br />
                         Descrição: @req.Descrição
                     </div>
                 </div>
-                            <br />
+                <br />
             }
         }
     </div>

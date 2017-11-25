@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using Trials4Health.Data;
 
 namespace Trials4Health
 {
@@ -20,6 +21,8 @@ namespace Trials4Health
                 .UseStartup<Startup>()
                 .UseApplicationInsights()
                 .Build();
+
+            SeedData.EnsurePopulated(host.Services);
 
             host.Run();
             

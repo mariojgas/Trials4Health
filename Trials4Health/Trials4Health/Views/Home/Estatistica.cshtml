@@ -1,73 +1,70 @@
-﻿@model RepositorioTrails
+﻿@model IRepositorioTrails
 
 @{
     ViewData["Title"] = "Estatisticas";
 }
 
-<h2>Estatisticas</h2>
-<div class="panel panel-primary" style="margin-top:28px;margin-bottom:10px">
+<div class="panel panel-primary">
     <div class="panel-heading">
         <h1 class=" panel-title">@ViewData["Title"]</h1>
     </div>
-    @{
+    <div class="panel-body" style="color:white;opacity:1;">
+        @{
 
 
-        foreach (Trilho t in Model.Trilhos)
-        {
-            Estatisticas estatisticas = new Estatisticas();
-            estatisticas.distancia = t.Distancia;
-            foreach (TrilhosPercorrido tp in Model.TrilhosPercorridos)
+            foreach (Trilho t in Model.Trilhos)
             {
-                if (tp.IdTrilho == t.Id)
+                Estatisticas estatisticas = new Estatisticas();
+                estatisticas.distancia = t.Distancia;
+                foreach (TrilhosPercorridos tp in Model.TrilhosPercorridos)
                 {
-                    foreach (Turista tu in Model.Turistas)
+                    if (tp.TrilhoId == t.TrilhoId)
                     {
-                        if (tp.IdTurista == tu.Id)
+                        foreach (Turista tu in Model.Turistas)
                         {
-                            estatisticas.gerarEstatisticas(tp, tu.Idade);
+                            if (tp.TuristaId == tu.TuristaId)
+                            {
+                                estatisticas.gerarEstatisticas(tp, tu.Idade);
+
+                            }
 
                         }
 
                     }
-
                 }
-            }
-            <div>
 
                 <h3>@t.Nome</h3>
-                <h4>Distancia: @estatisticas.distancia</h4>
-                <div>
-                    Tempo Médio:
-                    @estatisticas.tempoMedio.Hours h : @estatisticas.tempoMedio.Minutes m : @estatisticas.tempoMedio.Seconds s
-                </div>
-                <div>
-                    Velocidade Média:
-                    @estatisticas.velocidadeMedia
-                </div>
-                <div>
-                    Idade Média:
-                    @estatisticas.idadeMedia
-                </div>
-                <div>
-                    Idade Máxima:
-                    @estatisticas.idadeMax
-                </div>
-                <div>
-                    Idade Mínima:
-                    @estatisticas.idadeMin
-                </div>
-                <div>
-                    Calorias Médias:
-                    @estatisticas.caloriasMedias
-                </div>
-
-            </div>
-
-
-
+                    <h4>Distancia: @estatisticas.distancia</h4>
+                    <div>
+                        Tempo Médio:
+                        @estatisticas.tempoMedio.Hours h : @estatisticas.tempoMedio.Minutes m : @estatisticas.tempoMedio.Seconds s
+                    </div>
+                    <div>
+                        Velocidade Média:
+                        @estatisticas.velocidadeMedia
+                    </div>
+                    <div>
+                        Idade Média:
+                        @estatisticas.idadeMedia
+                    </div>
+                    <div>
+                        Idade Máxima:
+                        @estatisticas.idadeMax
+                    </div>
+                    <div>
+                        Idade Mínima:
+                        @estatisticas.idadeMin
+                    </div>
+                    <div>
+                        Calorias Médias:
+                        @estatisticas.caloriasMedias
+                    </div>
+                    <hr />
+            }
         }
-    }
+    </div>
 </div>
+
 @*public float caloriasMedias { get; set; }
     public TimeSpan tempoMedio { get; set; }
     public int idadeMin { get; set; }

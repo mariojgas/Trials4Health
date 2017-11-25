@@ -1,61 +1,62 @@
-﻿@{
+﻿@model IEnumerable<SOS>
+@{
     ViewData["Title"] = "Entorses";
 }
-<div class = "panel panel-info" style="margin-top:28px;">
 
-    <div class = "panel-heading">
 
-        <h1 class = "panel-title">@ViewData["Title"]</h1>
-    
-    </div>   
-        <div class=" panel-body" style="vertical-align: middle;">
-        
-           <div style="float:left;">
+<div class="panel panel-primary" style="margin-top:28px;margin-bottom:10px">
+    <div class="panel-heading">
+        <h1 class=" panel-title">@ViewData["Title"]</h1>
+    </div>
 
+
+    <div class="panel panel-body" style="color:white;opacity:1;">
+
+        <div style="float:left;">
+            <ul>
                 <li><a asp-controler="PrimeirosSocorros" asp-action="Desmaios">Desmaios</a></li>
 
                 <li><a asp-controler="PrimeirosSocorros" asp-action="Ataque">Ataque</a></li>
 
-                <li><a asp-controler="PrimeirosSocorros" asp-action="Hiportemia">Hiportemia</a></li>  
+                <li><a asp-controler="PrimeirosSocorros" asp-action="Hipotermia">Hipotermia</a></li>
+            </ul>
+        </div>
 
-           </div>
-            
-            <div style="float:right; width: 80%;">
+        <div style="float:right; width: 80%;">
 
-                <div class="panel panel-body">
-
-
-                    <div class="panel-body">
-                        @{
+            <div class="panel panel-body">
 
 
-                            foreach (SOS t in Model.PrimeirosSocorros)
+                <div class="panel-body">
+                    @{
+
+
+                        foreach (SOS t in Model)
+                        {
+                            if (@t.Nome.Equals(ViewData["Title"]))
                             {
-                                if (@t.Nome.Equals(ViewData["Title"]))
-                                {
+                                <div>
                                     <div>
-                                        <div>
-                                            Descrição:
-                                            <h5>@t.Descriçao</h5>
-                                        </div>
-                                        <div>
-                                            O que fazer:
-                                            @t.Tecnicas
-                                        </div>
+                                        Descrição:
+                                        <h5>@t.Descriçao</h5>
                                     </div>
+                                    <div>
+                                        O que fazer:
+                                        @t.Tecnicas
+                                    </div>
+                                </div>
 
 
 
-                                }
                             }
                         }
-                    </div>
-
+                    }
                 </div>
 
             </div>
 
+        </div>
+
     </div>
 
 </div>
-      

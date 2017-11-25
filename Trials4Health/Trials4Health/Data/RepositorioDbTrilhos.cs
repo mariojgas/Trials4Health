@@ -6,7 +6,7 @@ using Trials4Health.Models;
 
 namespace Trials4Health.Data
 {
-    public class RepositorioDbTrilhos:RepositorioTrails
+    public class RepositorioDbTrilhos:IRepositorioTrails
     {
         private ApplicationDbContext context;
         public RepositorioDbTrilhos(ApplicationDbContext context)
@@ -14,9 +14,7 @@ namespace Trials4Health.Data
             this.context = context;
         }
         public IEnumerable<Trilho> Trilhos => context.Trilhos;
-        public IEnumerable<TrilhosPercorrido> TrilhosPercorridos => context.trilhosPercorrido;
-
-        //public IEnumerable<TrilhosPercorrido> TrilhosPercorridos => throw new NotImplementedException();
+        public IEnumerable<TrilhosPercorridos> TrilhosPercorridos => context.trilhosPercorridos;
 
         public IEnumerable<Turista> Turistas => context.Turistas;
         public IEnumerable<SOS> PrimeirosSocorros => context.PrimeirosSocorros;

@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace Trials4Health.Models
 {
-    public interface RepositorioTrails
+    public interface IRepositorioTrails
     {
         IEnumerable<Trilho> Trilhos { get; }
-        IEnumerable<TrilhosPercorrido> TrilhosPercorridos { get; }
+        IEnumerable<TrilhosPercorridos> TrilhosPercorridos { get; }
         IEnumerable<Turista> Turistas { get; }
         IEnumerable<SOS> PrimeirosSocorros { get; }
         IEnumerable<Equipamentos> Equipamentos { get; }
