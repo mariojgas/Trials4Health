@@ -40,6 +40,11 @@ namespace Trials4Health.Data
                 EnsureCuidadosPopulated(dbContext);
             }
 
+            if (!dbContext.PrimeirosSocorros.Any())
+            {
+                EnsureSOSPopulated(dbContext);
+            }
+
             if (!dbContext.trilhosPercorridos.Any())
             {
                 EnsureTrilhosPercorridosPopulated(dbContext);
@@ -106,52 +111,49 @@ namespace Trials4Health.Data
         {
             Nome = "Ataque",
             Descriçao = "",
-            Tecnicas = "Ajudar o paciente a colocar-se na posição que lhe for mais confortável"
-                    + "Desapertar-lhe a roupa"
-                    + "Não tentar levantá-lo nem transportá-lo;"
-                    + "Não lhe dar nada para beber"
-                    + "Permanecer calmo"
-                    + "Tentar traquilizar a vítima"
+            Tecnicas = "Ajudar o paciente a colocar-se na posição que lhe for mais confortável."
+                    + "Desapertar-lhe a roupa."
+                    + "Não tentar levantá-lo nem transportá-lo."
+                    + "Não lhe dar nada para beber."
+                    + "Permanecer calmo."
+                    + "Tentar traquilizar a vítima."
                     + "Recordar, mentalemnte, as técnicas de reanimação cardiopulmonar para o caso de o paciente perder o pulso e a respiração parar."
         },
              new SOS
              {
                  Nome = "Entorses",
                  Descriçao = "",
-                 Tecnicas = " Coloca a articulação traumatizada em posição confortável e num plano elevado" +
-                     "Evitar que o doente faça movimentos" +
-                     "As pessoas com entorses no joelho ou no tornozelo devem evitar andar;" +
-                     "Aplica um saco de gelo ou uma compressa fria para reduzir a dor e o inchaço"
+                 Tecnicas = " Colocar a articulação traumatizada em posição confortável e num plano elevado." +
+                     "Evitar que o doente faça movimentos." +
+                     "As pessoas com entorses no joelho ou no tornozelo devem evitar andar." +
+                     "Aplicar um saco de gelo ou uma compressa fria para reduzir a dor e o inchaço."
              },
              new SOS
              {
                  Nome = "Hipotermia",
-                 Descriçao = "A hipotermia é uma situação que ocorre quando a temperatura do corpo baixa " +
-                                                        "para valores inferiores a 35ºC. O organismo deixa de consegui produzir" +
+                 Descriçao = "A hipotermia é uma situação que ocorre quando a temperatura do corpo baixa" +
+                                                        " para valores inferiores a 35ºC.O organismo deixa de consegui produzir" +
                                                         " calor suficiente para manter os níveis de temperatura considerados normais e" +
                                                         " torna-se impossível que ocorra o aquecimento espontâneo do corpo. A hipotermia" +
-                                                        " pode mesmo levar à morte." +
-                                                        "",
+                                                        " pode mesmo levar à morte.",
 
-                 Tecnicas = " Retira-lhe as roupas frias ou molhadas" +
-                    " Limpa e cobre-a com roupas secas e quentes" +
-                     "Coloca-a em local abrigado e, se possível, aquece o ambiente" +
-                     "Assegura que a vítima é observada por um médico"
+                 Tecnicas = "Retirar as roupas frias ou molhadas." +
+                    "Limpar e cobrir com roupas secas e quentes." +
+                     "Colocar a vítima em local abrigado e, se possível, aquece o ambiente." +
+                     "Assegurar que a vítima é observada por um médico."
              },
 
                new SOS
                {
                    Nome = "Desmaios",
-                   Descriçao = "É provocado por falta de oxigénio no cérebro, " +
-                                                        "a que o organismo reage de forma automática, com perda" +
-                                                        "de consciência e queda do corpo brusca e desamparada." +
-                                                        "Normalmente, o desmaio dura 2 ou 3 minutos." +
-
-                                                        "",
-                   Tecnicas = "Sentá-la" +
-                                                        " Colocar-lhe a cabeça entre as pernas" +
-                                                        "Molhar-lhe a testa com água fria" +
-                                                        "Dar-lhe a beber água, chá ou café açucarados"
+                   Descriçao = "É provocado por falta de oxigénio no cérebro," +
+                                                        " a que o organismo reage de forma automática, com perda" +
+                                                        " de consciência e queda do corpo brusca e desamparada." +
+                                                        "Normalmente, o desmaio dura 2 ou 3 minutos.",
+                   Tecnicas = "Sentár a vítima." +
+                                                        "Colocar-lhe a cabeça entre as pernas." +
+                                                        "Molhar-lhe a testa com água fria." +
+                                                        "Dar-lhe a beber água, chá ou café açucarados."
                }
             );
             dbContext.SaveChanges();

@@ -47,7 +47,7 @@ body {
     height: 100%;
     background-position: center center;
     background-size: cover;
-    background-image: url(img/slide-bg-1.jpg);
+    background-image: url(img/imgcar3.jpg);
     background-attachment: fixed;
 }
 .slide-text-table {
@@ -477,6 +477,12 @@ figure.single-portfolio:hover p.icon-links a:first-child {
     color: #212121;
     font-weight: 700;
 }
+
+.panel > .panel-primary {
+    overflow-y: scroll;
+    margin-top: 60px !important;
+}
+
 #footer {
     background: none repeat scroll 0 0 #212121;
     color: #999;
@@ -520,6 +526,13 @@ figure.single-portfolio:hover p.icon-links a:first-child {
     height: 1px;
     margin: 20px 0;
     width: 100%;
+}
+.footer{
+    position:page;
+    left:0;
+    bottom:0;
+    width:100%;
+    overflow:hidden;
 }
 .footer-ct-form input[type="submit"] {
     background: url(img/send_sep.png) no-repeat scroll right center;

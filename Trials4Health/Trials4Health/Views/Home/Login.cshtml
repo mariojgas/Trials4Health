@@ -4,12 +4,12 @@
 }
 
 <form asp-action="Login" asp-controller="Home" method="post">
-    <div class="panel panel-primary" style="margin-top:2em;">
+    <div class="panel panel-primary" style="margin-top:60px;opacity:0.8;">
         <div class="panel-heading">
             <h1 class=" panel-title">@ViewData["Title"]</h1>
         </div>
 
-        <div class="panel-body">
+        <div class="panel-body" style="color:white;opacity:1;">
             <div class="form-group">
                 <label asp-for="Username">Username:</label>
                 <input asp-for="Username" placeholder="Type your username" class="form-control" />
@@ -17,7 +17,7 @@
 
             <div class="form-group">
                 <label asp-for="Password">Password:</label>
-                <input asp-for="Password" placeholder="Type your password" class="form-control" type="password"/>
+                <input asp-for="Password" placeholder="Type your password" class="form-control" type="password" />
             </div>
             <div asp-validation-summary="All"></div>
         </div>

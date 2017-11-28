@@ -13,6 +13,5 @@ namespace Trials4Health.Models
 
         public string Nome { get; set; }
         public string Descrição { get; set; }
-        public int TrilhoId { get; set; }
     }
 }

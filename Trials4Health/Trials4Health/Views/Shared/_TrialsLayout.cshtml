@@ -18,12 +18,13 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>@ViewData["Title"] - Trials4Health</title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/font-awesome.css">
         <link rel="stylesheet" href="~/theme/css/animate.css">
         <link rel="stylesheet" href="~/theme/css/linecons.css">
         <link rel="stylesheet" href="~/theme/inc/strip/css/strip.css">
@@ -40,6 +41,7 @@
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="~/css/bootstrap.min.css">
+        <link rel="stylesheet" href="~/css/font-awesome.min.css">
         <link rel="stylesheet" href="~/theme/css/animate.css">
         <link rel="stylesheet" href="~/theme/css/linecons.css">
         <link rel="stylesheet" href="~/theme/inc/strip/css/strip.css">
@@ -89,9 +91,9 @@
     @Html.Raw(JavaScriptSnippet.FullScript)
 </head>
 
-<body>
+<body style="height:100%;background-image:url('/images/imgcar3.jpg') !important;background-repeat:repeat;">
     <header class="header">
-        <div class="container" style="width:100%">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-2">
                     <div class="logo" style="margin-top:-35px;">
@@ -127,53 +129,20 @@
         </div>
     </header> <!-- End header -->
 
-    <section id="slider">
+    <div class="container-fluid" style="height:100%;margin-bottom:20px;">
+        @RenderBody()
+    </div>
 
-        <div data-velocity="-.2" class="overlay-bg slide-bg" style="background-image:url('/images/imgcar3.jpg')">
-            <div class="container" style="margin-top:100px;">
-                @RenderBody()
-            </div>
-        </div>
-
-    </section> <!-- End slider -->
-
-    <footer id="footer" class="section-padding footer" style="padding-top:20px;align-self:baseline">
-          <div class="col-md-2 col-sm-4">
-            <div class="footer-widget">
-                <h2>Links</h2>
-                <ul>
-                    <a asp-action="Index" asp-controller="Home">Home</a>
-                    <a asp-action="Estatistica" asp-controller="Home">Estatisticas</a>
-                    <a asp-action="Requisitos" asp-controller="Home">Requisitos</a>
-                    <a asp-action="Equipamentos" asp-controller="Home">Equipamentos</a>
-                    <a asp-action="Cuidados" asp-controller="Home">Cuidados a ter</a>
-                    <a asp-action="PrimeirosSocorros" asp-controller="Home">Primeiros Socorros</a>
-                    <a asp-action="Contactos" asp-controller="Home">Contactos</a>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
+    <footer id="footer" class="footer bottom-left" style="position:sticky;bottom:0;">
+       <div class="row" style="margin-right:15px !important;">
             <div class="col-md-12">
                 <div class="footer-sep"></div>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-12">
                 <div class="footer-copyright">
-                    <p>One morning, when Gregor Samsa woke from troubled dreams, he found.<br /> Â© 2015 Your Awesome Company <span class="seprator">|</span> Designed by <a href="http://hasin.wordpress.com">Hasin</a> <span class="seprator">|</span> Coded with <i class="fa fa-heart"></i> by <a href="http://wpexpand.com" target="_blank">WP Expand</a></p>
+                    <p style="margin-left:15px">© 2017 João Dinis, Marco Vieira, Mario <span class="seprator">|</span> Designed & Coded with <i class="fa fa-heart"></i> by João Dinis, Marco Vieira & Mario</p>
                 </div>
             </div>
-
-            <div class="col-md-5">
-                <div class="footer-menu">
-                    <ul>
-                        <li><a href="">TERMS</a></li>
-                        <li><a href="">Privacy Policy</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">Job</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
         </div>
     </footer> <!-- End footer -->
 

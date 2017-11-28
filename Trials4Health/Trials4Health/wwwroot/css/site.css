@@ -27,7 +27,8 @@ textarea {
 .carousel-inner .item img[src$=".svg"] {
     width: 100%;
 }
-.footer g2{
+
+g2{
 
     background-color:black;
 }

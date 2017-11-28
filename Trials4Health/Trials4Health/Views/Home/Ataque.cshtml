@@ -4,13 +4,13 @@
 }
 
 
-<div class="panel panel-primary" style="margin-top:28px;margin-bottom:10px">
+<div class="panel panel-primary" style="margin-top:60px;opacity:0.8;">
     <div class="panel-heading">
         <h1 class=" panel-title">@ViewData["Title"]</h1>
     </div>
 
 
-    <div class="panel panel-body">
+    <div class="panel panel-body" style="color:white;opacity:1;">
 
         <div style="float:left;">
             <ul>
@@ -22,41 +22,16 @@
             </ul>
         </div>
 
-        <div style="float:right; width: 80%;">
+        <div class="panel panel-body" style="color:white;opacity:1;">
+            <div>
 
-            <div class="panel panel-body">
-
-
-                <div class="panel-body">
-                    @{
-
-
-                        foreach (SOS t in Model)
-                        {
-
-                            if (t.Nome.Equals(ViewData["Title"]))
-                            {
-                                <div>
-                                    <div>
-                                        Descrição:
-                                        <h5>@t.Descriçao</h5>
-                                    </div>
-                                    <div>
-                                        O que fazer:
-                                        @t.Tecnicas
-                                    </div>
-                                </div>
-
-
-
-                            }
-                        }
-                    }
-                </div>
-
+                @{
+                    Model.Where(t => t.Nome.Equals(ViewData["Title"])).ToList().ForEach(s =>
+                    {
+                        @Html.RenderPartial("PrimeirosSocorrosPartial", s);
+                    });
+                }
             </div>
         </div>
-
     </div>
-
 </div>

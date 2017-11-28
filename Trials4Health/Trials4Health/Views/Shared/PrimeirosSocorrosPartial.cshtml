@@ -1,0 +1,26 @@
+﻿@model SOS
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+<div style="padding-left:160px;">
+    <div>
+        Descrição:
+        @{
+            var list = @Model.Descriçao.Split('.');
+            list.ToList().ForEach(desc =>
+            {
+                Html.RenderPartial("DadosSOSPartial", desc);
+            });
+        }
+        <br />
+        O que fazer:
+        @{
+            list = @Model.Tecnicas.Split('.');
+            list.ToList().ForEach(tec => {
+                Html.RenderPartial("DadosSOSPartial", tec);
+        });
+        }
+    </div>
+</div>

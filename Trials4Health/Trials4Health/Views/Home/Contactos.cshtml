@@ -4,46 +4,30 @@
 
 
 
-    <div class="panel panel-secondary" style="margin-top:2em;"> <div class="panel-heading text-center">
-            <h2>Contactos</h2>
-        </div>
-    <form asp-action="Contact" method="post">
+<div class="panel panel-primary" style="margin-top:60px;opacity:0.8;">
+    <div class="panel-heading">
+        <h1 class=" panel-title">@ViewData["Title"]</h1>
+    </div>
 
-   
+    <div class="panel-body" style="color:white;opacity:1;">
+        <form id="contactos" asp-action="Contact" method="post">
+            <p>Localização: Guarda, Portugal</p>
+            <p id="p1">E-mail: trails4health@gmail.com</p>
+            <p>Telemovel: 969 696 966</p>
+            <br />
+            <br />
 
-
-
-		<div class="panel-body"  style="color:white;opacity:1;">
-		
-			
-    <div asp-validation-summary="All"></div> 
-
-    <p>Localização: Guarda, Portugal</p>
-
-        <p id="p1">E-mail: trails4health@gmail.com</p>
-
-			
-        <p>Telemovel: 969 696 966</p>
-
-
-
-		
-    <br/><br/>
-			
             <p>Para qualquer duvida deixe uma mensagem</p>
-
-			<input class="textBox" type="text" id="" placeholder="..." />
-    <br/>
-		<br/>
-
-		</div>
-        
-		<div class="panel-footer text-center">
-
-
-
-			<button class="btn btn-secondary">
-                   Mandar Mensagem
-    </button> </div>
+            <textarea class="textBox" type="text" rows="10" cols="20" style="width:300px;height:300px" placeholder="Introduza aqui a sua mensagem..."></textarea>
+            <br />
+            <br />
+            <div asp-validation-summary="All"></div>
         </form>
     </div>
+
+    <div class="panel-footer text-center">
+        <button class="btn btn-secondary" type="submit" formtarget="contactos">
+            Mandar Mensagem
+        </button>
+    </div>
+</div>
