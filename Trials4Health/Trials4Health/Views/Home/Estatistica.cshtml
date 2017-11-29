@@ -9,64 +9,70 @@
     <div class="panel-heading">
         <h1 class=" panel-title">@ViewData["Title"]</h1>
     </div>
+    
     @{
 
 
-        foreach (Trilho t in Model.Trilhos)
-        {
-            Estatisticas estatisticas = new Estatisticas();
-            estatisticas.distancia = t.Distancia;
-            foreach (TrilhosPercorrido tp in Model.TrilhosPercorridos)
-            {
-                if (tp.IdTrilho == t.Id)
+                foreach (Trilho t in Model.Trilhos)
                 {
-                    foreach (Turista tu in Model.Turistas)
+                    Estatisticas estatisticas = new Estatisticas();
+                    estatisticas.distancia = t.Distancia;
+                    foreach (TrilhosPercorrido tp in Model.TrilhosPercorridos.Where(tpercorrido => tpercorrido.IdTrilho == t.Id))
                     {
-                        if (tp.IdTurista == tu.Id)
+
+                        foreach (Turista tu in Model.Turistas.Where(turista => turista.Id == tpercorrido.IdTurista))
                         {
+                            
                             estatisticas.gerarEstatisticas(tp, tu.Idade);
+                            
 
                         }
 
-                    }
 
-                }
-            }
+                    }
+                
+            //apagar daqui para cima
             <div>
 
                 <h3>@t.Nome</h3>
                 <h4>Distancia: @estatisticas.distancia</h4>
                 <div>
                     Tempo Médio:
-                    @estatisticas.tempoMedio.Hours h : @estatisticas.tempoMedio.Minutes m : @estatisticas.tempoMedio.Seconds s
-                </div>
-                <div>
-                    Velocidade Média:
-                    @estatisticas.velocidadeMedia
-                </div>
-                <div>
-                    Idade Média:
-                    @estatisticas.idadeMedia
-                </div>
-                <div>
-                    Idade Máxima:
-                    @estatisticas.idadeMax
-                </div>
-                <div>
-                    Idade Mínima:
-                    @estatisticas.idadeMin
-                </div>
-                <div>
-                    Calorias Médias:
-                    @estatisticas.caloriasMedias
-                </div>
-
+                @estatisticas.tempoMedio.Hours h : @estatisticas.tempoMedio.Minutes m : @estatisticas.tempoMedio.Seconds s
             </div>
+
+            <div>
+                Velocidade Média:
+                @estatisticas.velocidadeMedia
+            </div>
+
+            <div>
+                Idade Média:
+                @estatisticas.idadeMedia
+            </div>
+
+            <div>
+                Idade Máxima:
+                @estatisticas.idadeMax
+            </div>
+
+            <div>
+                Idade Mínima:
+                @estatisticas.idadeMin
+            </div>
+
+            <div>
+                Calorias Médias:
+                @estatisticas.caloriasMedias
+            </div>
+
+
+        </div>
 
 
 
         }
-    }
+        }
 </div>
 @*public float caloriasMedias { get; set; }
     public TimeSpan tempoMedio { get; set; }
