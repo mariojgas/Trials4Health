@@ -13,25 +13,25 @@
     @{
 
 
-                foreach (Trilho t in Model.Trilhos)
+        foreach (Trilho t in Model.Trilhos)
+        {
+            Estatisticas estatisticas = new Estatisticas();
+            estatisticas.distancia = t.Distancia;
+            foreach (TrilhosPercorrido tp in Model.TrilhosPercorridos.Where(tpercorrido => tpercorrido.IdTrilho == t.Id))
+            {
+
+                /*foreach (Turista tu in Model.Turistas.Where(turista => turista.Id == tpercorrido.IdTurista))
                 {
-                    Estatisticas estatisticas = new Estatisticas();
-                    estatisticas.distancia = t.Distancia;
-                    foreach (TrilhosPercorrido tp in Model.TrilhosPercorridos.Where(tpercorrido => tpercorrido.IdTrilho == t.Id))
-                    {
 
-                        foreach (Turista tu in Model.Turistas.Where(turista => turista.Id == tpercorrido.IdTurista))
-                        {
-                            
-                            estatisticas.gerarEstatisticas(tp, tu.Idade);
-                            
-
-                        }
+                    estatisticas.gerarEstatisticas(tp, tu.Idade);
 
 
-                    }
-                
-            //apagar daqui para cima
+                }*/
+                estatisticas.gerarEstatisticas(tp, Model.Turistas.Where(tu => tu.Id == tp.IdTurista).First());
+
+            }
+
+            
             <div>
 
                 <h3>@t.Nome</h3>
