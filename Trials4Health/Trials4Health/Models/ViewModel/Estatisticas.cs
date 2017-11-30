@@ -74,8 +74,10 @@ namespace Trials4Health.Models
             totalIdade += idade;
             if (idadeMax < idade)
                 idadeMax = idade;
-            else if (idadeMin > idade)
+
+            if (idadeMin > idade)
                 idadeMin = idade;
+
             idadeMedia = totalIdade / nPessoas;
             //velocidade Média em metros por segundos
             velocidadeMedia = (float)distancia / (float)segundosMedios;
