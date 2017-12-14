@@ -74,6 +74,33 @@ namespace Trials4Health.Controllers
         public ViewResult Cuidados() => View(repository.Cuidados);
         public ViewResult Requisitos() => View(repository.Requisitos);
         public ViewResult Equipamentos() => View(repository.Equipamentos);
+
+
+
+
+
+        [HttpGet]
+        public ViewResult EstatisticaSelect()
+        {
+            return View();
+        }
+        //Post /Home/Rsvp
+        [HttpPost]
+        public ViewResult EstatisticaSelect(GuestResponse response)
+        {
+            if (ModelState.IsValid)
+            {
+                Repository.AddGuestResponse(response);
+
+                return View("Thanks", response);
+
+            }
+            else
+            {
+                return View();
+            }
+
+        }
     }
 }
 
