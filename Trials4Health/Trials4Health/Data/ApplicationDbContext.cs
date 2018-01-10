@@ -23,7 +23,7 @@ namespace Trials4Health.Data
         {
             modelBuilder.Entity<TrilhosPercorridos>().ToTable("TrilhosPercorridos");
 
-            // BookCategory Primary key
+            // Primary key
             modelBuilder.Entity<TrilhosPercorridos>()
                 .HasKey(bc => new { bc.TrilhosPercorridosId });
 
@@ -33,11 +33,11 @@ namespace Trials4Health.Data
             modelBuilder.Entity<Turista>()
                 .HasKey(tur => tur.TuristaId);
 
-            // BookCategory Foreign keys
+            // Foreign keys
             modelBuilder.Entity<TrilhosPercorridos>()
-                .HasOne(bc => bc.trilho)
-                .WithMany(b => b.trilhosPercorridos)
-                .HasForeignKey(bc => bc.TrilhoId);
+                .HasOne(tp => tp.trilho)
+                .WithMany(t => t.trilhosPercorridos)
+                .HasForeignKey(tp => tp.TrilhoId);
 
             modelBuilder.Entity<TrilhosPercorridos>()
                 .HasOne(bc => bc.turista)

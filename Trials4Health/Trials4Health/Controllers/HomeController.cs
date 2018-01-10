@@ -82,17 +82,33 @@ namespace Trials4Health.Controllers
         [HttpGet]
         public ViewResult EstatisticaSelect()
         {
-            return View();
+            return View(repository);
         }
         //Post /Home/Rsvp
         [HttpPost]
-        public ViewResult EstatisticaSelect(GuestResponse response)
+        //Passar como parametro o ID do trilho
+        public ViewResult EstatisticaSelect(Trilho t)
         {
             if (ModelState.IsValid)
             {
-                Repository.AddGuestResponse(response);
+                
 
-                return View("Thanks", response);
+                return View("EstatisticaTrilho", t);
+
+            }
+            else
+            {
+                return View(repository);
+            }
+
+        }
+        public ViewResult EstatisticaSelect(Turista t)
+        {
+            if (ModelState.IsValid)
+            {
+
+
+                return View("EstatisticaTurista", t);
 
             }
             else
