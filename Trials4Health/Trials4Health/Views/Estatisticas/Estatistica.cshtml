@@ -27,7 +27,7 @@
 
 
                 }*/
-                estatisticas.gerarEstatisticas(tp, Model.Turistas.Where(tu => tu.Id == tp.IdTurista).First());
+                estatisticas.gerarEstatisticas(tp, Model.Turistas.Where(tu => tu.Id == tp.IdTurista).First().Idade);
 
             }
 
