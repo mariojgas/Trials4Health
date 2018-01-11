@@ -24,9 +24,9 @@ namespace Trials4Health.Controllers
         public ViewResult Estatistica() => View(repository);
 
         [HttpGet]
-        public ViewResult Rsvp()
+        public ViewResult EstatisticasSelect()
         {
-            return View();
+            return View(repository);
         }
 
 
@@ -53,13 +53,14 @@ namespace Trials4Health.Controllers
         //
         // POST: /Home/Rsvp
         [HttpPost]
-        public ViewResult Rsvp(Trilho t)
+        public ViewResult EstatisticasSelect(int ?id)
         {
+            BuscarTrilho(id);
             if (ModelState.IsValid)
             {
                 //Repository.AddResponse(response);
 
-                return View("EstatisticasTrilho", t);
+                return View("EstatisticasTrilho", repository.Trilhos.Where(t => t.Id == id).First());
             }
             else
             {

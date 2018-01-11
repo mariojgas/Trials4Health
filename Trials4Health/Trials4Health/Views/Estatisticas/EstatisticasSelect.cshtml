@@ -1,7 +1,26 @@
-﻿
+﻿@model RepositorioTrails
 @{
     ViewData["Title"] = "EstatisticasSelect";
 }
 
 <h2>EstatisticasSelect</h2>
 
+<form asp-action="EstatisticasSelect" method="post">
+    <div class="panel-body ">
+
+            <select asp-for="Id" class="form-control">
+                <option value="">Escolha um Trilho</option>
+               
+                @foreach (Trilho t in RepositorioTrails.Trilhos)
+                {
+                <option value=@t.Id>@t.Nome</option>
+                 
+                }                
+            </select>
+        </div>
+
+    <div class="panel-footer">
+        <button type="submit" class="btn btn-primary">Continuar</button>
+
+    </div>
+</form>
