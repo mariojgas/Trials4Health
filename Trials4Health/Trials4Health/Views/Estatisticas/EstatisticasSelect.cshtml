@@ -1,0 +1,32 @@
+﻿@model RepositorioTrails
+@{
+    ViewData["Title"] = "EstatisticasSelect";
+}
+
+<h2>EstatisticasSelect</h2>
+
+
+    <div class="panel-body ">
+
+            
+               
+                @foreach (Trilho t in Model.Trilhos)
+                {
+                    
+                    <p>
+                        OLA
+                        @t.Nome
+                        <a asp-action="Trilho" asp-route-id="@t.Id">Estatisticas</a>
+                    </p>
+
+                    @*<p>@t.Nome  <button type="submit" value=@t.Id class="btn btn-primary">Estatisticas</button></p>*@
+
+
+                    }
+
+</div>
+
+    <div class="panel-footer">
+        <button type="submit" class="btn btn-primary">Continuar</button>
+
+    </div>

@@ -24,6 +24,12 @@ namespace Trials4Health.Controllers
 
 
         }
+
+        public IActionResult Ataque()
+        {
+            ViewData["Message"] = "O que fazer em caso de Ataque?";
+            return View();
+        }
         
 
         [HttpGet]
@@ -60,62 +66,29 @@ namespace Trials4Health.Controllers
             return View();
         }
 
-        private IRepositorioTrails repository;
-        public HomeController(IRepositorioTrails repository)
+        private RepositorioTrails repository;
+        public HomeController(RepositorioTrails repository)
         {
             this.repository = repository;
         }
 
         public ViewResult Estatistica() => View(repository);
         public ViewResult Desmaios() => View(repository.PrimeirosSocorros);
-        public ViewResult Entorses() => View(repository.PrimeirosSocorros);
-        public ViewResult Hipotermia() => View(repository.PrimeirosSocorros);
-        public ViewResult Ataque() => View(repository.PrimeirosSocorros);
         public ViewResult Cuidados() => View(repository.Cuidados);
         public ViewResult Requisitos() => View(repository.Requisitos);
         public ViewResult Equipamentos() => View(repository.Equipamentos);
 
-
-
-
-
-        [HttpGet]
-        public ViewResult EstatisticaSelect()
+        public IActionResult Entorses()
         {
-            return View(repository);
+            ViewData["Message"] = "O que fazer em caso de Entorses?";
+
+            return View();
         }
-        //Post /Home/Rsvp
-        [HttpPost]
-        //Passar como parametro o ID do trilho
-        public ViewResult EstatisticaSelect(Trilho t)
+        public IActionResult Hiportemia()
         {
-            if (ModelState.IsValid)
-            {
-                
+            ViewData["Message"] = "O que fazer em caso de Hiportemia?";
 
-                return View("EstatisticaTrilho", t);
-
-            }
-            else
-            {
-                return View(repository);
-            }
-
-        }
-        public ViewResult EstatisticaSelect(Turista t)
-        {
-            if (ModelState.IsValid)
-            {
-
-
-                return View("EstatisticaTurista", t);
-
-            }
-            else
-            {
-                return View();
-            }
-
+            return View();
         }
     }
 }
