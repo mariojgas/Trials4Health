@@ -5,22 +5,28 @@
 
 <h2>EstatisticasSelect</h2>
 
-<form asp-action="EstatisticasSelect" method="post">
+
     <div class="panel-body ">
 
-            <select asp-for="Id" class="form-control">
-                <option value="">Escolha um Trilho</option>
+            
                
-                @foreach (Trilho t in RepositorioTrails.Trilhos)
+                @foreach (Trilho t in Model.Trilhos)
                 {
-                <option value=@t.Id>@t.Nome</option>
-                 
-                }                
-            </select>
-        </div>
+                    
+                    <p>
+                        OLA
+                        @t.Nome
+                        <a asp-action="Trilho" asp-route-id="@t.Id">Estatisticas</a>
+                    </p>
+
+                    @*<p>@t.Nome  <button type="submit" value=@t.Id class="btn btn-primary">Estatisticas</button></p>*@
+
+
+                    }
+
+</div>
 
     <div class="panel-footer">
         <button type="submit" class="btn btn-primary">Continuar</button>
 
     </div>
-</form>

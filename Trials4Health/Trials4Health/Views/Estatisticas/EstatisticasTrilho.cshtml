@@ -1,7 +1,69 @@
-﻿
+﻿@model VisualizarEstatisticas
 @{
     ViewData["Title"] = "EstatisticasTrilho";
 }
 
 <h2>EstatisticasTrilho</h2>
 
+
+@Model.trilho.Nome
+
+        @{ 
+            Estatisticas estatisticas = new Estatisticas();
+            estatisticas.distancia = Model.trilho.Distancia;
+            foreach (TrilhosPercorrido tp in Model.TrilhosPercorridos)
+            {
+
+                /*foreach (Turista tu in Model.Turistas.Where(turista => turista.Id == tpercorrido.IdTurista))
+                {
+
+                    estatisticas.gerarEstatisticas(tp, tu.Idade);
+
+
+                }*/
+                estatisticas.gerarEstatisticas(tp, Model.Turistas.Where(tu => tu.Id == tp.IdTurista).First().Idade);
+
+            }
+
+
+<div>
+
+    <h3>@Model.trilho.Nome</h3>
+    <h4>Distancia: @estatisticas.distancia</h4>
+    <div>
+        Tempo Médio:
+        @estatisticas.tempoMedio.Hours h : @estatisticas.tempoMedio.Minutes m : @estatisticas.tempoMedio.Seconds s
+    </div>
+
+    <div>
+        Velocidade Média:
+        @estatisticas.velocidadeMedia
+    </div>
+
+    <div>
+        Idade Média:
+        @estatisticas.idadeMedia
+    </div>
+
+    <div>
+        Idade Máxima:
+        @estatisticas.idadeMax
+    </div>
+
+    <div>
+        Idade Mínima:
+        @estatisticas.idadeMin
+    </div>
+
+    <div>
+        Calorias Médias:
+        @estatisticas.caloriasMedias
+    </div>
+
+
+</div>
+
+
+
+        }
+        

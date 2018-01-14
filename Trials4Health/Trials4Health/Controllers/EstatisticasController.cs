@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Trials4Health.Models;
+using Trials4Health.Models.ViewModel;
 
 namespace Trials4Health.Controllers
 {
@@ -23,26 +24,19 @@ namespace Trials4Health.Controllers
 
         public ViewResult Estatistica() => View(repository);
 
-        [HttpGet]
-        public ViewResult EstatisticasSelect()
-        {
-            return View(repository);
-        }
+       
+        
 
+        
 
-        public async Task<IActionResult> XS()
-        {
-            return View(await repository.Trilhos.ToListAsync());
-        }
-
-        public async Task<IActionResult> BuscarTrilho(int? id)
+        public  async Task<IActionResult> BuscarTrilho(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            Trilho t = await repository.Trilhos.SingleOrDefaultAsync(tr => tr.Id == id);
+            Trilho t =  repository.Trilhos.FirstOrDefault(tr => tr.Id == id);
             if (t == null)
             {
                 return NotFound();
@@ -51,22 +45,30 @@ namespace Trials4Health.Controllers
             return  View(t);
         }
         //
+
+        [HttpGet]
+        public ViewResult EstatisticasSelect() => View(repository);
+
         // POST: /Home/Rsvp
-        [HttpPost]
-        public ViewResult EstatisticasSelect(int ?id)
+        [HttpGet]
+        public  ViewResult  Trilho(int id)
         {
-            BuscarTrilho(id);
+            
+            
+            //BuscarTrilho(id);
+            Trilho t =  repository.Trilhos.SingleOrDefault(tr => tr.Id == id);
+            VisualizarEstatisticas ve = new VisualizarEstatisticas(t,repository);
+
             if (ModelState.IsValid)
             {
                 //Repository.AddResponse(response);
-
-                return View("EstatisticasTrilho", repository.Trilhos.Where(t => t.Id == id).First());
+                
+                return View("EstatisticasTrilho", ve);
             }
             else
-            {
                 // There are validation errors
-                return View();
-            }
+                return View(repository);
+           
         }
 
     }
