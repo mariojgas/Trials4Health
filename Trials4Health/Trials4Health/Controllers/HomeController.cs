@@ -66,8 +66,8 @@ namespace Trials4Health.Controllers
             return View();
         }
 
-        private RepositorioTrails repository;
-        public HomeController(RepositorioTrails repository)
+        private IRepositorioTrails repository;
+        public HomeController(IRepositorioTrails repository)
         {
             this.repository = repository;
         }

@@ -11,13 +11,13 @@ namespace Trials4Health.Controllers
     public class EstatisticasController : Controller
     {
 
-        private RepositorioTrails repository;
+        private IRepositorioTrails repository;
 
         public IActionResult Index()
         {
             return View();
         }
-        public EstatisticasController(RepositorioTrails repository)
+        public EstatisticasController(IRepositorioTrails repository)
         {
             this.repository = repository;
         }
@@ -36,7 +36,7 @@ namespace Trials4Health.Controllers
                 return NotFound();
             }
 
-            Trilho t =  repository.Trilhos.FirstOrDefault(tr => tr.Id == id);
+            Trilho t =  repository.Trilhos.FirstOrDefault(tr => tr.TrilhoId == id);
             if (t == null)
             {
                 return NotFound();
@@ -56,7 +56,7 @@ namespace Trials4Health.Controllers
             
             
             //BuscarTrilho(id);
-            Trilho t =  repository.Trilhos.SingleOrDefault(tr => tr.Id == id);
+            Trilho t =  repository.Trilhos.SingleOrDefault(tr => tr.TrilhoId == id);
             VisualizarEstatisticas ve = new VisualizarEstatisticas(t,repository);
 
             if (ModelState.IsValid)

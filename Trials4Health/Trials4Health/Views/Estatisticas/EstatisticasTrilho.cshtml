@@ -11,7 +11,7 @@
         @{ 
             Estatisticas estatisticas = new Estatisticas();
             estatisticas.distancia = Model.trilho.Distancia;
-            foreach (TrilhosPercorrido tp in Model.TrilhosPercorridos)
+            foreach (TrilhosPercorridos tp in Model.TrilhosPercorridos)
             {
 
                 /*foreach (Turista tu in Model.Turistas.Where(turista => turista.Id == tpercorrido.IdTurista))
@@ -21,7 +21,7 @@
 
 
                 }*/
-                estatisticas.gerarEstatisticas(tp, Model.Turistas.Where(tu => tu.Id == tp.IdTurista).First().Idade);
+                estatisticas.gerarEstatisticas(tp, Model.Turistas.Where(tu => tu.TuristaId == tp.TuristaId).First().Idade);
 
             }
 
