@@ -16,16 +16,7 @@ namespace Trials4Health.Controllers
             return View();
         }
 
-        public IActionResult PrimeirosSocorros()
-        {
-            ViewData["Message"] = "Primeiros Socorros";
-
-            return View();
-
-
-        }
-        
-
+      
         [HttpGet]
         public IActionResult Login()
         {
