@@ -9,6 +9,7 @@ namespace Trials4Health.Models
     public class SOS
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
         public int SOSId { get; set; }
 
         public string Nome { get; set; }
