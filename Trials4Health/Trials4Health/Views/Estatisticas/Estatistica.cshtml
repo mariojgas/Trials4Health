@@ -1,4 +1,4 @@
-﻿@model RepositorioTrails
+﻿@model IRepositorioTrails
 
 @{
     ViewData["Title"] = "Estatisticas";
@@ -17,7 +17,7 @@
         {
             Estatisticas estatisticas = new Estatisticas();
             estatisticas.distancia = t.Distancia;
-            foreach (TrilhosPercorrido tp in Model.TrilhosPercorridos.Where(tpercorrido => tpercorrido.IdTrilho == t.Id))
+            foreach (TrilhosPercorridos tp in Model.TrilhosPercorridos.Where(tpercorrido => tpercorrido.TrilhoId == t.TrilhoId))
             {
 
                 /*foreach (Turista tu in Model.Turistas.Where(turista => turista.Id == tpercorrido.IdTurista))
@@ -27,7 +27,7 @@
 
 
                 }*/
-                estatisticas.gerarEstatisticas(tp, Model.Turistas.Where(tu => tu.Id == tp.IdTurista).First().Idade);
+                estatisticas.gerarEstatisticas(tp, Model.Turistas.Where(tu => tu.TuristaId == tp.TuristaId).First().Idade);
 
             }
 

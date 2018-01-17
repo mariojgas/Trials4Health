@@ -8,7 +8,7 @@ namespace Trials4Health.Data
 {
     public class SeedData
     {
-        public static void EnsurePopulated(IServiceProvider serviceProvider)
+       /* public static void EnsurePopulated(IServiceProvider serviceProvider)
         {
             ApplicationDbContext dbContext = (ApplicationDbContext)serviceProvider.GetService(typeof(ApplicationDbContext));
 
@@ -186,5 +186,5 @@ namespace Trials4Health.Data
 
             dbContext.SaveChanges();
         }
-    }
+   */ }
 }

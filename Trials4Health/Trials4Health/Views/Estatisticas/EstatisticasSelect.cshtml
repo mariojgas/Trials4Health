@@ -1,4 +1,4 @@
-﻿@model RepositorioTrails
+﻿@model IRepositorioTrails
 @{
     ViewData["Title"] = "EstatisticasSelect";
 }
@@ -8,15 +8,15 @@
 
     <div class="panel-body ">
 
-            
+            <p>Por favor Selecione o Trilho que quer ver as estatísticas</p>
                
                 @foreach (Trilho t in Model.Trilhos)
                 {
                     
                     <p>
-                        OLA
+                        
                         @t.Nome
-                        <a asp-action="Trilho" asp-route-id="@t.Id">Estatisticas</a>
+                        <a asp-action="Trilho" asp-route-id="@t.TrilhoId">Estatisticas</a>
                     </p>
 
                     @*<p>@t.Nome  <button type="submit" value=@t.Id class="btn btn-primary">Estatisticas</button></p>*@

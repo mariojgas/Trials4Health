@@ -33,14 +33,14 @@ namespace Trials4Health
             // Add framework services.
             services.AddMvc();
 
-            services.AddTransient<IRepositorioTrails, RepositorioDbTrilhos>();//mudar para RepositorioDbTrilhos
-
+            services.AddTransient<IRepositorioTrails, RepositorioFalsoTemp>();//mudar para RepositorioDbTrilhos
+            /*
             services.AddDbContext<ApplicationDbContext>(
                 options => options.UseSqlServer(
                     Configuration.GetConnectionString("ConnectionStringTrials4Health")
                 )
             );
-
+            */
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
