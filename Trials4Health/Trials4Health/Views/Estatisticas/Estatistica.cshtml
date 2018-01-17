@@ -1,0 +1,86 @@
+﻿@model IRepositorioTrails
+
+@{
+    ViewData["Title"] = "Estatisticas";
+}
+
+<h2>Estatisticas</h2>
+<div class="panel panel-primary" style="margin-top:28px;margin-bottom:10px">
+    <div class="panel-heading">
+        <h1 class=" panel-title">@ViewData["Title"]</h1>
+    </div>
+    
+    @{
+
+
+        foreach (Trilho t in Model.Trilhos)
+        {
+            Estatisticas estatisticas = new Estatisticas();
+            estatisticas.distancia = t.Distancia;
+            foreach (TrilhosPercorridos tp in Model.TrilhosPercorridos.Where(tpercorrido => tpercorrido.TrilhoId == t.TrilhoId))
+            {
+
+                /*foreach (Turista tu in Model.Turistas.Where(turista => turista.Id == tpercorrido.IdTurista))
+                {
+
+                    estatisticas.gerarEstatisticas(tp, tu.Idade);
+
+
+                }*/
+                estatisticas.gerarEstatisticas(tp, Model.Turistas.Where(tu => tu.TuristaId == tp.TuristaId).First().Idade);
+
+            }
+
+            
+            <div>
+
+                <h3>@t.Nome</h3>
+                <h4>Distancia: @estatisticas.distancia</h4>
+                <div>
+                    Tempo Médio:
+                @estatisticas.tempoMedio.Hours h : @estatisticas.tempoMedio.Minutes m : @estatisticas.tempoMedio.Seconds s
+            </div>
+
+            <div>
+                Velocidade Média:
+                @estatisticas.velocidadeMedia
+            </div>
+
+            <div>
+                Idade Média:
+                @estatisticas.idadeMedia
+            </div>
+
+            <div>
+                Idade Máxima:
+                @estatisticas.idadeMax
+            </div>
+
+            <div>
+                Idade Mínima:
+                @estatisticas.idadeMin
+            </div>
+
+            <div>
+                Calorias Médias:
+                @estatisticas.caloriasMedias
+            </div>
+
+
+        </div>
+
+
+
+        }
+        }
+</div>
+@*public float caloriasMedias { get; set; }
+    public TimeSpan tempoMedio { get; set; }
+    public int idadeMin { get; set; }
+    public int idadeMax { get; set; }
+    public long totalTempo { get; set; }
+    public long totalCal { get; set; }
+    public long totalIdade { get; set; }
+    public int idadeMedia { get; set; }
+    public float velocidadeMedia { get; set; }
+    public decimal distancia { get; set; }*@

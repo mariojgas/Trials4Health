@@ -1,4 +1,4 @@
-﻿@model IRepositorioTrails
+﻿@model Trilho
 
 @{
     ViewData["Title"] = "Estatisticas";
@@ -11,13 +11,11 @@
     <div class="panel-body" style="color:white;opacity:1;">
         @{
 
-
-            foreach (TrilhosPercorridos t in Model.Trilhos)
-            {
-                
+        
+          
                 Estatisticas estatisticas = new Estatisticas();
                 estatisticas.distancia = t.Distancia;
-                foreach (TrilhosPercorridos tp in Model.TrilhosPercorridos)
+                foreach (TrilhosPercorridos tp in Model.trilhosPercorridos)
                 {
                     if (tp.TrilhoId == t.TrilhoId)
                     {
@@ -35,7 +33,7 @@
                 }
 
                 <h3>@t.Nome</h3>
-                    <h4>Distancia: @estatisticas.distancia</h4>
+                <h4>Distancia: @estatisticas.distancia</h4>
                     <div>
                         Tempo Médio:
                         @estatisticas.tempoMedio.Hours h : @estatisticas.tempoMedio.Minutes m : @estatisticas.tempoMedio.Seconds s
@@ -65,14 +63,3 @@
         }
     </div>
 </div>
-
-@*public float caloriasMedias { get; set; }
-    public TimeSpan tempoMedio { get; set; }
-    public int idadeMin { get; set; }
-    public int idadeMax { get; set; }
-    public long totalTempo { get; set; }
-    public long totalCal { get; set; }
-    public long totalIdade { get; set; }
-    public int idadeMedia { get; set; }
-    public float velocidadeMedia { get; set; }
-    public decimal distancia { get; set; }*@

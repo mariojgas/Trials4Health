@@ -1,0 +1,51 @@
+﻿@model IRepositorioTrails
+
+@{
+    ViewData["Title"] = "Estatisticas";
+}
+
+<body>
+    <h3>Trilhos</h3>
+    <p>Seleciona que estatisticas quer ver</p>
+    
+    <h4>Gerar estatisticas de um trilho</h4>
+    <form asp-action="EstatisticaSelect" method="post">
+        <div class="form-group">
+            <label asp-for="Trilho">Trilho:</label>
+            <select asp-for="Trilho" class="form-control">
+                <option value="">Escolher Trilho</option>
+                @foreach (Trilho t in Model.Trilhos)
+                {
+                    <option value=t>@t.Nome</option>
+
+                }
+            </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit Response</button>
+        </form>
+        
+
+    <h4>Gerar estatisticas de um turista</h4>
+    <form asp-action="EstatisticaSelect" method="post">
+        <div class="form-group">
+            <label asp-for="Turista">Turista:</label>
+            <select asp-for="Turista" class="form-control">
+                <option value="">Escolher Turista</option>
+                @foreach (Turista t in Model.Turista)
+            {
+                    <option value=t>@t.Nome</option>
+
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">OK</button>
+    </form>
+
+
+
+
+
+
+
+</body>

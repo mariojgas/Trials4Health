@@ -22,7 +22,7 @@ namespace Trials4Health
                 .UseApplicationInsights()
                 .Build();
 
-            SeedData.EnsurePopulated(host.Services);
+            //SeedData.EnsurePopulated(host.Services);
 
             host.Run();
             
