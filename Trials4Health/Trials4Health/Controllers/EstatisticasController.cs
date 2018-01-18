@@ -17,6 +17,7 @@ namespace Trials4Health.Controllers
         {
             return View();
         }
+
         public EstatisticasController(IRepositorioTrails repository)
         {
             this.repository = repository;

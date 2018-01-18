@@ -21,7 +21,7 @@
 
 
                 }*/
-                estatisticas.gerarEstatisticas(tp, Model.Turistas.Where(tu => tu.TuristaId == tp.TuristaId).First().Idade);
+                estatisticas.gerarEstatisticas(tp, Model.Turistas.Where(tu => tu.ID_Turista == tp.ID_Turista).First().Idade);
 
             }
 
@@ -37,7 +37,7 @@
 
     <div>
         Velocidade Média:
-        @estatisticas.velocidadeMedia
+        @estatisticas.velocidadeMedia m/s
     </div>
 
     <div>

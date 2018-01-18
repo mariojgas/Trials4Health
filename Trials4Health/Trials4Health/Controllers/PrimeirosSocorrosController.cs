@@ -12,7 +12,7 @@ using Trials4Health.Models;
 
 namespace Trials4Health.Controllers
 {
-    public class SOSController : Controller
+    public class PrimeirosSocorrosController : Controller
     {
         private IRepositorioTrails repository;
 
@@ -21,7 +21,7 @@ namespace Trials4Health.Controllers
             return View();
         }
 
-        public SOSController(IRepositorioTrails repository)
+        public PrimeirosSocorrosController(IRepositorioTrails repository)
         {
             this.repository = repository;
         }
