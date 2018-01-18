@@ -9,7 +9,7 @@ namespace Trials4Health.Models
     public class Cuidados
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CuidadosId { get; set; }
+        public int ID_Cuidado { get; set; }
 
         public string Nome { get; set; }
         public string Descrição { get; set; }

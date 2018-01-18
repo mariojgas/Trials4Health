@@ -56,10 +56,10 @@ namespace Trials4Health.Models
         public void gerarEstatisticas(TrilhosPercorridos trilhosPercorridos,int idade) {
             nPessoas++;
             //Tempo Médio
-            totalTempo += trilhosPercorridos.tempo.Hours * 3600 + trilhosPercorridos.tempo.Minutes * 60 + trilhosPercorridos.tempo.Seconds;
-            totalsegundos += trilhosPercorridos.tempo.Seconds;
-            totalminutos += trilhosPercorridos.tempo.Minutes;
-            totalhoras += trilhosPercorridos.tempo.Hours;
+            totalTempo += trilhosPercorridos.Tempo.Hours * 3600 + trilhosPercorridos.Tempo.Minutes * 60 + trilhosPercorridos.Tempo.Seconds;
+            totalsegundos += trilhosPercorridos.Tempo.Seconds;
+            totalminutos += trilhosPercorridos.Tempo.Minutes;
+            totalhoras += trilhosPercorridos.Tempo.Hours;
             int segundosMedios = totalTempo / nPessoas;
             tempoMedio = new TimeSpan(totalhoras/nPessoas,totalminutos/nPessoas,totalsegundos/nPessoas);
             
@@ -67,7 +67,7 @@ namespace Trials4Health.Models
 
             
             //calorias Médias
-            totalCal += trilhosPercorridos.calorias;
+            totalCal += trilhosPercorridos.Calorias;
             caloriasMedias = totalCal / nPessoas;
 
             //Idade Minima e máxima

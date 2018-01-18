@@ -70,9 +70,9 @@ namespace Trials4Health.Data
         {
             dbContext.Requisitos.AddRange(
 
-        new Requisitos { Nome = "Guia", Descrição = "O trilho necessita de guia?" },
-            new Requisitos { Nome = "GPS", Descrição = "O trilho necessita de gps?" },
-            new Requisitos { Nome = "Medico", Descrição = "O trilho necessita de assistencia medica?" }
+        new Requisitos { Nome = "Guia", Descrição = "O Trilhos necessita de guia?" },
+            new Requisitos { Nome = "GPS", Descrição = "O Trilhos necessita de gps?" },
+            new Requisitos { Nome = "Medico", Descrição = "O Trilhos necessita de assistencia medica?" }
 
             );
             dbContext.SaveChanges();
@@ -84,7 +84,7 @@ namespace Trials4Health.Data
             dbContext.Equipamentos.AddRange(
                 new Equipamentos { Nome = "Botas de montanhismo", Descrição = "Botas adequadas para montanhismo" },
             new Equipamentos { Nome = "GPS", Descrição = "Equipamento de GPS" },
-            new Equipamentos { Nome = "Kit Primeiros Socorros", Descrição = "Kit de primeiros socorros para trilhos de elevada dificuldade" }
+            new Equipamentos { Nome = "Kit Primeiros Socorros", Descrição = "Kit de primeiros socorros para Trilhos de elevada dificuldade" }
 
             );
             dbContext.SaveChanges();
@@ -97,7 +97,7 @@ namespace Trials4Health.Data
 
         new Cuidados { Nome = "Protetor Solar", Descrição = "Trilho com bastante exposição solar" },
             new Cuidados { Nome = "Calçado adequado", Descrição = "Trilho necessita de calçado adequado" },
-            new Cuidados { Nome = "Ravinas", Descrição = "Cuidado com o trilho que possui caminhos estreitos e de passagem perigosa" }
+            new Cuidados { Nome = "Ravinas", Descrição = "Cuidado com o Trilhos que possui caminhos estreitos e de passagem perigosa" }
 
             );
             dbContext.SaveChanges();
@@ -107,7 +107,7 @@ namespace Trials4Health.Data
         public static void EnsureSOSPopulated(ApplicationDbContext dbContext)
         {
             dbContext.PrimeirosSocorros.AddRange(
-        new SOS
+        new PrimeirosSocorros
         {
             Nome = "Ataque",
             Descriçao = "",
@@ -119,7 +119,7 @@ namespace Trials4Health.Data
                     + "Tentar traquilizar a vítima."
                     + "Recordar, mentalemnte, as técnicas de reanimação cardiopulmonar para o caso de o paciente perder o pulso e a respiração parar."
         },
-             new SOS
+             new PrimeirosSocorros
              {
                  Nome = "Entorses",
                  Descriçao = "",
@@ -128,7 +128,7 @@ namespace Trials4Health.Data
                      "As pessoas com entorses no joelho ou no tornozelo devem evitar andar." +
                      "Aplicar um saco de gelo ou uma compressa fria para reduzir a dor e o inchaço."
              },
-             new SOS
+             new PrimeirosSocorros
              {
                  Nome = "Hipotermia",
                  Descriçao = "A hipotermia é uma situação que ocorre quando a temperatura do corpo baixa" +
@@ -143,7 +143,7 @@ namespace Trials4Health.Data
                      "Assegurar que a vítima é observada por um médico."
              },
 
-               new SOS
+               new PrimeirosSocorros
                {
                    Nome = "Desmaios",
                    Descriçao = "É provocado por falta de oxigénio no cérebro," +
@@ -164,14 +164,14 @@ namespace Trials4Health.Data
         public static void EnsureTrilhosPercorridosPopulated(ApplicationDbContext dbContext)
         {
             dbContext.trilhosPercorridos.AddRange(
-            new TrilhosPercorridos { tempo = new TimeSpan(1, 2, 3), calorias = 1005, TrilhoId = 1, TuristaId = 1 },
-            new TrilhosPercorridos { tempo = new TimeSpan(1, 12, 3), calorias = 1589, TrilhoId = 1, TuristaId = 2 },
-            new TrilhosPercorridos { tempo = new TimeSpan(1, 44, 3), calorias = 1234, TrilhoId = 1, TuristaId = 3 },
-            new TrilhosPercorridos { tempo = new TimeSpan(2, 11, 3), calorias = 1700, TrilhoId = 1, TuristaId = 2 },
-            new TrilhosPercorridos { tempo = new TimeSpan(2, 44, 3), calorias = 1600, TrilhoId = 2, TuristaId = 2 },
-            new TrilhosPercorridos { tempo = new TimeSpan(3, 44, 3), calorias = 1589, TrilhoId = 2, TuristaId = 3 },
-            new TrilhosPercorridos { tempo = new TimeSpan(1, 44, 3), calorias = 1234, TrilhoId = 3, TuristaId = 1 },
-            new TrilhosPercorridos { tempo = new TimeSpan(2, 11, 3), calorias = 1700, TrilhoId = 3, TuristaId = 2 }
+            new TrilhosPercorridos { Tempo = new TimeSpan(1, 2, 3), Calorias = 1005, ID_Trilho = 1, ID_Turista = 1 },
+            new TrilhosPercorridos { Tempo = new TimeSpan(1, 12, 3), Calorias = 1589, ID_Trilho = 1, ID_Turista = 2 },
+            new TrilhosPercorridos { Tempo = new TimeSpan(1, 44, 3), Calorias = 1234, ID_Trilho = 1, ID_Turista = 3 },
+            new TrilhosPercorridos { Tempo = new TimeSpan(2, 11, 3), Calorias = 1700, ID_Trilho = 1, ID_Turista = 2 },
+            new TrilhosPercorridos { Tempo = new TimeSpan(2, 44, 3), Calorias = 1600, ID_Trilho = 2, ID_Turista = 2 },
+            new TrilhosPercorridos { Tempo = new TimeSpan(3, 44, 3), Calorias = 1589, ID_Trilho = 2, ID_Turista = 3 },
+            new TrilhosPercorridos { Tempo = new TimeSpan(1, 44, 3), Calorias = 1234, ID_Trilho = 3, ID_Turista = 1 },
+            new TrilhosPercorridos { Tempo = new TimeSpan(2, 11, 3), Calorias = 1700, ID_Trilho = 3, ID_Turista = 2 }
                 );
             dbContext.SaveChanges();
 

@@ -12,18 +12,18 @@
         @{
 
 
-            foreach (TrilhosPercorridos t in Model.Trilhos)
+            foreach (Trilho t in Model.Trilhos)
             {
                 
                 Estatisticas estatisticas = new Estatisticas();
                 estatisticas.distancia = t.Distancia;
                 foreach (TrilhosPercorridos tp in Model.TrilhosPercorridos)
                 {
-                    if (tp.TrilhoId == t.TrilhoId)
+                    if (tp.ID_Trilho == t.ID_Trilho)
                     {
                         foreach (Turista tu in Model.Turistas)
                         {
-                            if (tp.TuristaId == tu.TuristaId)
+                            if (tp.ID_Turista == tu.ID_Turista)
                             {
                                 estatisticas.gerarEstatisticas(tp, tu.Idade);
 

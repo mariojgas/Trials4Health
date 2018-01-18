@@ -10,11 +10,10 @@ namespace Trials4Health.Models
     {
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int TuristaId { get; set; }
+        public int ID_Turista { get; set; }
 
         public int Idade { get; set; }
         public string Nome { get; set; }
         public string CondicaoFisica { get; set; }
-        public ICollection<TrilhosPercorridos> trilhosPercorridos { get; set; }
     }
 }

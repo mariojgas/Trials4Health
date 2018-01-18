@@ -9,12 +9,13 @@ namespace Trials4Health.Models
     public class Trilho
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int TrilhoId { get; set; }
+        public int ID_Trilho { get; set; }
+        public int ID_Segurança { get; set; }
+        public int ID_Dificuldade { get; set; }
 
         public string Nome { get; set; }
         public decimal Distancia { get; set; }
         //public Estatisticas estatisticas { get; set; }
-        public ICollection<TrilhosPercorridos> trilhosPercorridos { get; set; }
-      
+
     }
 }

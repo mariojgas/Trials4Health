@@ -11,8 +11,8 @@
     <h4>Gerar estatisticas de um trilho</h4>
     <form asp-action="EstatisticaSelect" method="post">
         <div class="form-group">
-            <label asp-for="Trilho">Trilho:</label>
-            <select asp-for="Trilho" class="form-control">
+            <label asp-for="Trilhos">Trilho:</label>
+            <select asp-for="Trilhos" class="form-control">
                 <option value="">Escolher Trilho</option>
                 @foreach (Trilho t in Model.Trilhos)
                 {
@@ -29,10 +29,10 @@
     <h4>Gerar estatisticas de um turista</h4>
     <form asp-action="EstatisticaSelect" method="post">
         <div class="form-group">
-            <label asp-for="Turista">Turista:</label>
-            <select asp-for="Turista" class="form-control">
+            <label asp-for="Turistas">Turista:</label>
+            <select asp-for="Turistas" class="form-control">
                 <option value="">Escolher Turista</option>
-                @foreach (Turista t in Model.Turista)
+                @foreach (Turista t in Model.Turistas)
             {
                     <option value=t>@t.Nome</option>
 

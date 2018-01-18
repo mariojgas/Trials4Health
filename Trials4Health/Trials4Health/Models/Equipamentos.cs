@@ -9,7 +9,7 @@ namespace Trials4Health.Models
     public class Equipamentos
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int EquipamentosId { get; set; }
+        public int ID_Equipamento { get; set; }
 
         public string Nome { get; set; }
         public string Descrição { get; set; }

@@ -10,7 +10,7 @@ namespace Trials4Health.Models
         IEnumerable<Trilho> Trilhos { get; }
         IEnumerable<TrilhosPercorridos> TrilhosPercorridos { get; }
         IEnumerable<Turista> Turistas { get; }
-        IEnumerable<SOS> PrimeirosSocorros { get; }
+        IEnumerable<PrimeirosSocorros> PrimeirosSocorros { get; }
         IEnumerable<Equipamentos> Equipamentos { get; }
         IEnumerable<Cuidados> Cuidados { get; }
         IEnumerable<Requisitos> Requisitos { get; }
