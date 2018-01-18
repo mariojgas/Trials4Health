@@ -1,0 +1,481 @@
+@marcovieira2710
+Criação do controlador, e alteração das views  …
+
+marcovieira2710 committed 3 days ago
+Tempo: 1:30h
+
+marcovieira2710 committed 3 days ago
+Tempo: 1:30h
+a903154  
+ @marcovieira2710
+Atualização do diagrama de classes  …
+
+marcovieira2710 committed 3 days ago
+Tempo: 1h
+fba1ad7  
+Commits on Jan 11, 2018
+ @marcovieira2710
+Criação do relatorio final, atualização das tarefas ao longo das aula…  …
+
+marcovieira2710 committed 7 days ago
+…s, identação do relatorio
+
+Tempo: Marco Vieira 2h
+João Dinis 2h
+Mario Simões 12min
+3a71635  
+Commits on Jan 10, 2018
+ @marcovieira2710
+Diagrama de Atividade_InserirEquipamento  …
+
+marcovieira2710 committed 8 days ago
+Tempo: 1:30H
+Verified   5090ba8  
+Commits on Nov 25, 2017
+ @marcovieira2710
+Relatorio Intermedio
+
+marcovieira2710 committed on 25 Nov 2017
+fdf17f1  
+Commits on Nov 24, 2017
+ @marcovieira2710
+Criação de um repositorio falso  …
+
+marcovieira2710 committed on 24 Nov 2017
+Tempo: 20 min
+1c1bd32  
+ @marcovieira2710
+Alteração da class, Colocar informação sobre os tipos de manobras de …  …
+
+marcovieira2710 committed on 24 Nov 2017
+…socorrismo
+
+Tempo: 2 horas
+de264be  
+ @marcovieira2710
+update Views  …
+
+marcovieira2710 committed on 24 Nov 2017
+Tempo: 5 min
+040f408  
+Commits on Nov 23, 2017
+ @marcovieira2710
+Alteração dos Menus das Views, tornar as paginas dinamicas  …
+
+marcovieira2710 committed on 23 Nov 2017
+Tempo: 2 horas
+ea0eeb7  
+ @marcovieira2710
+as
+
+marcovieira2710 committed on 23 Nov 2017
+8ba82df  
+Commits on Nov 22, 2017
+ @marcovieira2710
+Relatorio, estrutura, padroes de desenvolvimento e descrição do projeto  …
+
+marcovieira2710 committed on 22 Nov 2017
+Tempo: 2 h e 15 min
+4a970a1  
+ @marcovieira2710
+Pequena alteração nas Views e no controler  …
+
+marcovieira2710 committed on 22 Nov 2017
+Tempo: 30min
+4d8d82a  
+Commits on Nov 21, 2017
+ @marcovieira2710
+Criação da Class SOS, Alteração das Views, Liagação dos botões com o …  …
+
+marcovieira2710 committed on 21 Nov 2017
+…Controler, para assim visualizar as Views dos Primeiros Socorros.
+
+Tempo:  2h
+ef86422  
+Commits on Nov 17, 2017
+ @marcovieira2710
+Create link
+
+marcovieira2710 committed on 17 Nov 2017
+Verified   6f38cf4  
+Commits on Nov 15, 2017
+ @marcovieira2710
+Digito de Controlo  …
+
+marcovieira2710 committed on 15 Nov 2017
+Digito de Controlo, Tempo- 30min
+16cc798  
+Commits on Nov 2, 2017
+ @marcovieira2710
+update  …
+
+marcovieira2710 committed on 2 Nov 2017
+contactos
+62585cb  
+ @marcovieira2710
+contactos  …
+
+marcovieira2710 committed on 2 Nov 2017
+accc346  
+ @marcovieira2710
+update
+
+marcovieira2710 committed on 2 Nov 2017
+6cec3f4  
+ @marcovieira2710
+layout  …
+
+marcovieira2710 committed on 2 Nov 2017
+16c021a  
+ @marcovieira2710
+...layout
+
+marcovieira2710 committed on 2 Nov 2017
+f680c79  
+ @marcovieira2710
+commite_inicial
+
+marcovieira2710 committed on 2 Nov 2017
+0112c8f  
+Commits on Oct 26, 2017
+ @marcovieira2710
+update
+
+marcovieira2710 committed on 26 Oct 2017
+ba632c7  
+ @marcovieira2710
+Carregamento dos ficheiros ESII
+
+marcovieira2710 committed on 26 Oct 2017
+8336122  
+ @marcovieira2710
+diario
+
+marcovieira2710 committed on 26 Oct 2017
+8baa3d4  
+NewerOlder
+
+
+
+
+
+
+
+
+12:55h --> master
+
+
+
+
+
+
+
+
+
+
+
+
+
+Criação de um repositorio falso  …
+
+marcovieira2710 committed on 24 Nov 2017
+Tempo: 20 min
+1c1bd32  
+ @marcovieira2710
+Alteração da class, Colocar informação sobre os tipos de manobras de …  …
+
+marcovieira2710 committed on 24 Nov 2017
+…socorrismo
+
+Tempo: 2 horas
+de264be  
+
+2h 30m - Layout Update  …
+
+ @marcovieira2710
+update Views  …
+
+marcovieira2710 committed on 24 Nov 2017
+Tempo: 5 min
+
+
+
+
+
+
+
+
+
+2:25h --> EstatisticasViews 
+
+
+
+
+
+
+
+
+
+
+Criação de um repositorio falso  …
+
+marcovieira2710 committed on 24 Nov 2017
+Tempo: 20 min
+1c1bd32  
+ @marcovieira2710
+Alteração da class, Colocar informação sobre os tipos de manobras de …  …
+
+marcovieira2710 committed on 24 Nov 2017
+…socorrismo
+
+Tempo: 2 horas
+de264be  
+
+2h 30m - Layout Update  …
+
+
+marcovieira2710 committed on 24 Nov 2017
+Tempo: 5 min
+040f408  
+Commits on Nov 23, 2017
+ @marcovieira2710
+Alteração dos Menus das Views, tornar as paginas dinamicas  …
+
+marcovieira2710 committed on 23 Nov 2017
+Tempo: 2 horas
+ea0eeb7  
+ @marcovieira2710
+as
+
+marcovieira2710 committed on 23 Nov 2017
+8ba82df  
+Commits on Nov 22, 2017
+
+Tabela de Atores, objetivos e respetivos Casos de Uso(1h 10m)  …
+
+ @marcovieira2710
+Relatorio, estrutura, padroes de desenvolvimento e descrição do projeto  …
+
+marcovieira2710 committed on 22 Nov 2017
+Tempo: 2 h e 15 min
+4a970a1  
+ @marcovieira2710
+Pequena alteração nas Views e no controler  …
+
+marcovieira2710 committed on 22 Nov 2017
+Tempo: 30min
+4d8d82a  
+Commits on Nov 21, 2017
+
+Update ao Layout  …
+
+ @marcovieira2710
+Criação da Class SOS, Alteração das Views, Liagação dos botões com o …  …
+
+marcovieira2710 committed on 21 Nov 2017
+…Controler, para assim visualizar as Views dos Primeiros Socorros.
+
+Tempo:  2h
+
+
+
+
+
+
+
+
+
+
+
+
+Base_Dados --> 9:10h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@marcovieira2710
+as  …
+
+marcovieira2710 committed on 25 Nov 2017
+as
+3f8c3fc  
+ @marcovieira2710
+Relatorio_Fase Intermedia  …
+
+marcovieira2710 committed on 25 Nov 2017
+final
+d0365a7  
+Commits on Nov 24, 2017
+ @marcovieira2710
+Criação de um repositorio falso  …
+
+marcovieira2710 committed on 24 Nov 2017
+Tempo: 20 min
+1c1bd32  
+ @marcovieira2710
+Alteração da class, Colocar informação sobre os tipos de manobras de …  …
+
+marcovieira2710 committed on 24 Nov 2017
+…socorrismo
+
+Tempo: 2 horas
+de264be  
+ @marcovieira2710
+update Views  …
+
+marcovieira2710 committed on 24 Nov 2017
+Tempo: 5 min
+040f408  
+Commits on Nov 23, 2017
+ @marcovieira2710
+Alteração dos Menus das Views, tornar as paginas dinamicas  …
+
+marcovieira2710 committed on 23 Nov 2017
+Tempo: 2 horas
+ea0eeb7  
+Commits on Nov 22, 2017
+ @marcovieira2710
+Pequena alteração nas Views e no controler  …
+
+marcovieira2710 committed on 22 Nov 2017
+Tempo: 30min
+4d8d82a  
+Commits on Nov 21, 2017
+ @marcovieira2710
+Criação da Class SOS, Alteração das Views, Liagação dos botões com o …  …
+
+marcovieira2710 committed on 21 Nov 2017
+…Controler, para assim visualizar as Views dos Primeiros Socorros.
+
+Tempo:  2h
+ef86422  
+Commits on Nov 17, 2017
+ @marcovieira2710
+Create link
+
+marcovieira2710 committed on 17 Nov 2017
+Verified   6f38cf4  
+
+Iframe_SOS  …
+
+Marco Manuel Santos Vieira committed on 17 Nov 2017
+Update_final de Aula Tempo: 15 min
+5634c78  
+
+Update Iframe  …
+
+Marco Manuel Santos Vieira committed on 17 Nov 2017
+Correção de Link iframe, Tempo= 10min
+091c0c7  
+
+Update Iframe  …
+
+Marco Manuel Santos Vieira committed on 17 Nov 2017
+Iframe correção de erros
+0d965a5  
+
+layout_Paragem Cardiorespiratoria  …
+
+Marco Manuel Santos Vieira committed on 17 Nov 2017
+Tempo:3min
+3ee5277  
+
+SOS  …
+
+Marco Manuel Santos Vieira committed on 17 Nov 2017
+Update iframe, Tempo: 7min
+51f55c0  
+
+Update_SOS  …
+
+Marco Manuel Santos Vieira committed on 17 Nov 2017
+Correção de erros. Tempo= 2min
+d10f18d  
+
+SOS_layout  …
+
+Marco Manuel Santos Vieira committed on 17 Nov 2017
+update ao layout, Tempo: 1h e 20 min
+a50dbc9  
+
+Criação das paginas de Estatisticas,Primeiros Socorros e Requesitos (…  …
+
+Goldenheaven committed on 17 Nov 2017
+…0.75 horas)
+
+Update ao Layout (1/30 horas)
+d48e888  
+
+Pequeno Update ao layout e correcção no estilo da pagina contactos - …  …
+
+Goldenheaven committed on 17 Nov 2017
+…(0.08(3) horas)
+7a1137a  
+Commits on Nov 15, 2017
+ @marcovieira2710
+Digito de Controlo  …
+
+marcovieira2710 committed on 15 Nov 2017
+Digito de Controlo, Tempo- 30min
+
+
+
+
+
+
+9:00 --> SOS_Update
+
+
+
+
+
+
+
+
+Criação de um repositorio falso  …
+
+marcovieira2710 committed on 24 Nov 2017
+Tempo: 20 min
+1c1bd32  
+ @marcovieira2710
+Alteração da class, Colocar informação sobre os tipos de manobras de …  …
+
+marcovieira2710 committed on 24 Nov 2017
+…socorrismo
+
+Tempo: 2 horas
+
+@marcovieira2710
+Alteração dos Menus das Views, tornar as paginas dinamicas  …
+
+marcovieira2710 committed on 23 Nov 2017
+Tempo: 2 horas
+
+Relatorio, estrutura, padroes de desenvolvimento e descrição do projeto  …
+
+marcovieira2710 committed on 22 Nov 2017
+Tempo: 2 h e 15 min
+4a970a1  
+ @marcovieira2710
+Pequena alteração nas Views e no controler  …
+
+marcovieira2710 committed on 22 Nov 2017
+Tempo: 30min
+
+
+
+ViewSelecionar --> 7:10h
+
+
+
+Total de horas em commits = 41:10h
