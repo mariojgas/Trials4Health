@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Estatisticas";
+}
+
+
+<div class="panel panel-primary" style="margin-top:60px;margin-bottom:10px;opacity:0.8;">
+    <div class="panel-heading">
+        <h1 class=" panel-title">@ViewData["Title"]</h1>
+    </div>
+
+
+    <div class="panel panel-body" style="color:white;opacity:1;">
+
+        <ul style="list-style-type:circle">
+
+            <li><a asp-controler="Estatisticas" asp-action="Estatistica">Estatistica</a></li>
+
+            <li><a asp-controler="Estatisticas" asp-action="EstatisticasSelect">Selecionar Estatisticas</a></li>
+
+        </ul>
+    </div>
+</div>

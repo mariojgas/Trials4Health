@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Primeiros Socorros";
+}
+
+
+<div class="panel panel-primary" style="margin-top:60px;margin-bottom:10px;opacity:0.8;">
+    <div class="panel-heading">
+        <h1 class=" panel-title">@ViewData["Title"]</h1>
+    </div>
+
+
+    <div class="panel panel-body" style="color:white;opacity:1;">
+        
+        <ul style="list-style-type:circle">
+
+            <li><a asp-controler="PrimeirosSocorros" asp-action="Desmaios">Desmaio</a></li>
+
+            <li><a asp-controler="PrimeirosSocorros" asp-action="Ataque">Ataque</a></li>
+
+            <!--<li><a asp-controler="Home" asp-action="Hipoglicemia">Hipoglicemia</a></li>-->
+
+            <li><a asp-controler="PrimeirosSocorros" asp-action="Entorses">Entorses</a></li>
+
+            <li><a asp-controler="PrimeirosSocorros" asp-action="Hipotermia">Hipotermia</a></li>
+        </ul>
+        <div class="panel-body" style="color:white;opacity:1;">
+            <a asp-action="Create" asp-controller="PrimeirosSocorros">Criar Primeiros Socorros</a>
+            <br />
+            <a asp-controller="PrimeirosSocorros">Ver Primeiros Socorros</a>
+        </div>
+    </div>
+</div>

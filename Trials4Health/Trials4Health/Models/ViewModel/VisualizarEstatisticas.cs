@@ -13,7 +13,7 @@ namespace Trials4Health.Models.ViewModel
         public VisualizarEstatisticas(Trilho t,IRepositorioTrails rp) {
             trilho = t;
             
-            TrilhosPercorridos = rp.TrilhosPercorridos.Where(tp => tp.TrilhoId == t.TrilhoId);
+            TrilhosPercorridos = rp.TrilhosPercorridos.Where(tp => tp.ID_Trilho == t.ID_Trilho);
             Turistas = rp.Turistas;
 
         }

@@ -1,0 +1,40 @@
+﻿@model Trials4Health.Models.Requisitos
+
+@{
+    ViewData["Title"] = "Adicionar Requisitos";
+}
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+</head>
+<hr />
+<body>
+    <div class="table table-striped">
+        <div class="panel panel-primary" style="margin-top:14ex;">
+            <div class="panel-heading">
+                <h3 class="panel-title">Criar Requisitos</h3>
+            </div>
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="panel-body">
+                    <label asp-for="Nome" class="control-label">Nome</label>
+                    <input asp-for="Nome" class="form-control" asp-items="ViewBag.Nome" style="width:300px;"></input>
+                </div>
+                <div class="panel-body">
+                    <label asp-for="Descrição" class="control-label">Descrição</label>
+                    <input asp-for="Descrição" class="form-control" asp-items="ViewBag.Descrição" style="width:300px;"></input>
+                </div>
+                <div class="panel-footer">
+                    <div class="panel-body">
+                        <input type="submit" value="Criar" class="btn btn-primary" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div asp-validation-summary="All"></div>
+    <div>
+        <a asp-action="Requisitos" asp-controller="Requisitos">Voltar à Lista</a>
+    </div>
+</body>
+</html>

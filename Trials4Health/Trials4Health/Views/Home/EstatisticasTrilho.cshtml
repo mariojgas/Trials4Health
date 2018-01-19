@@ -1,4 +1,4 @@
-﻿@model Trilho
+﻿@model TrilhosPercorridos
 
 @{
     ViewData["Title"] = "Estatisticas";
@@ -21,7 +21,7 @@
                     {
                         foreach (Turista tu in Model.Turistas)
                         {
-                            if (tp.TuristaId == tu.TuristaId)
+                            if (tp.TuristaId == tu.ID_Turista)
                             {
                                 estatisticas.gerarEstatisticas(tp, tu.Idade);
 

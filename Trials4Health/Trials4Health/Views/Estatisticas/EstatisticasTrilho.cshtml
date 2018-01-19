@@ -1,6 +1,6 @@
 ﻿@model VisualizarEstatisticas
 @{
-    ViewData["Title"] = "EstatisticasTrilho";
+    ViewData["Title"] = "Estatisticas";
 }
 
 <h2>EstatisticasTrilho</h2>
@@ -21,7 +21,7 @@
 
 
                 }*/
-                estatisticas.gerarEstatisticas(tp, Model.Turistas.Where(tu => tu.TuristaId == tp.TuristaId).First().Idade);
+                estatisticas.gerarEstatisticas(tp, Model.Turistas.Where(tu => tu.ID_Turista == tp.ID_Turista).First().Idade);
 
             }
 
@@ -37,7 +37,7 @@
 
     <div>
         Velocidade Média:
-        @estatisticas.velocidadeMedia
+        @estatisticas.velocidadeMedia m/s
     </div>
 
     <div>
@@ -60,9 +60,9 @@
         @estatisticas.caloriasMedias
     </div>
 
-
 </div>
 
+<a asp-action="EstatisticasSelect" asp-controller="Estatisticas">Voltar a Tras</a>
 
 
         }

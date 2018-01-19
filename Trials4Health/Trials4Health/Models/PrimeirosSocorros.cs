@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace Trials4Health.Models
 {
-    public class SOS
+    public class PrimeirosSocorros
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
-        public int SOSId { get; set; }
+        public int ID_SOS { get; set; }
 
         public string Nome { get; set; }
         public string Descriçao { get; set; }
         public string Tecnicas { get; set; }
-
     }
 }

@@ -1,32 +1,27 @@
 ﻿@model IRepositorioTrails
 @{
-    ViewData["Title"] = "EstatisticasSelect";
+    ViewData["Title"] = "Estatisticas";
 }
 
 <h2>EstatisticasSelect</h2>
 
 
-    <div class="panel-body ">
+<div class="panel-body " style="opacity:1">
 
-            <p>Por favor Selecione o Trilho que quer ver as estatísticas</p>
+        <p>Por favor Selecione o Trilho que quer ver as estatísticas</p>
                
-                @foreach (Trilho t in Model.Trilhos)
-                {
+            @foreach (Trilho t in Model.Trilhos)
+            {
                     
-                    <p>
+                <p>
                         
-                        @t.Nome
-                        <a asp-action="Trilho" asp-route-id="@t.TrilhoId">Estatisticas</a>
-                    </p>
+                    @t.Nome: 
+                    <a asp-action="Trilho" asp-route-id="@t.ID_Trilho" class="btn btn-primary" style="opacity:1;color:white;">Estatisticas</a>
+                </p>
 
-                    @*<p>@t.Nome  <button type="submit" value=@t.Id class="btn btn-primary">Estatisticas</button></p>*@
+                @*<p>@t.Nome  <button type="submit" value=@t.Id class="btn btn-primary">Estatisticas</button></p>*@
 
 
-                    }
+            }
 
 </div>
-
-    <div class="panel-footer">
-        <button type="submit" class="btn btn-primary">Continuar</button>
-
-    </div>

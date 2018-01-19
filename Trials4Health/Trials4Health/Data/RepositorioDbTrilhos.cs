@@ -17,7 +17,7 @@ namespace Trials4Health.Data
         public IEnumerable<TrilhosPercorridos> TrilhosPercorridos => context.trilhosPercorridos;
 
         public IEnumerable<Turista> Turistas => context.Turistas;
-        public IEnumerable<SOS> PrimeirosSocorros => context.PrimeirosSocorros;
+        public IEnumerable<PrimeirosSocorros> PrimeirosSocorros => context.PrimeirosSocorros;
         public IEnumerable<Equipamentos> Equipamentos => context.Equipamentos;
         public IEnumerable<Cuidados> Cuidados => context.Cuidados;
         public IEnumerable<Requisitos> Requisitos => context.Requisitos;

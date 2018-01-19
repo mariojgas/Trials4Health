@@ -1,0 +1,37 @@
+﻿@model IEnumerable<PrimeirosSocorros>
+@{
+    ViewData["Title"] = "Hipotermia";
+}
+
+
+<div class="panel panel-primary" style="margin-top:60px;opacity:0.8;">
+    <div class="panel-heading">
+        <h1 class=" panel-title">@ViewData["Title"]</h1>
+    </div>
+
+
+    <div class="panel panel-body" style="color:white;opacity:1;">
+
+        <div style="float:left;">
+            <ul>
+                <li><a asp-controler="PrimeirosSocorros" asp-action="Entorses">Entorses</a></li>
+
+                <li><a asp-controler="PrimeirosSocorros" asp-action="Ataque">Ataque</a></li>
+
+                <li><a asp-controler="PrimeirosSocorros" asp-action="Desmaios">Desmaios</a></li>
+            </ul>
+        </div>
+
+        <div>
+
+            @{
+                Model.Where(t => t.Nome.Equals(ViewData["Title"])).ToList().ForEach(s =>
+                {
+                    @Html.RenderPartial("PrimeirosSocorrosPartial", s);
+                });
+            }
+        </div>
+
+    </div>
+
+</div>

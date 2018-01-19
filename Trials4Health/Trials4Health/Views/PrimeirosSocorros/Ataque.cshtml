@@ -1,6 +1,6 @@
-﻿@model IEnumerable<SOS>
+﻿@model IEnumerable<PrimeirosSocorros>
 @{
-    ViewData["Title"] = "Hipotermia";
+    ViewData["Title"] = "Ataque";
 }
 
 
@@ -16,22 +16,22 @@
             <ul>
                 <li><a asp-controler="PrimeirosSocorros" asp-action="Entorses">Entorses</a></li>
 
-                <li><a asp-controler="PrimeirosSocorros" asp-action="Ataque">Ataque</a></li>
-
                 <li><a asp-controler="PrimeirosSocorros" asp-action="Desmaios">Desmaios</a></li>
+
+                <li><a asp-controler="PrimeirosSocorros" asp-action="Hipotermia">Hipotermia</a></li>
             </ul>
         </div>
 
-        <div>
+        <div class="panel panel-body" style="color:white;opacity:1;">
+            <div>
 
-            @{
-                Model.Where(t => t.Nome.Equals(ViewData["Title"])).ToList().ForEach(s =>
-                {
-                    @Html.RenderPartial("PrimeirosSocorrosPartial", s);
-                });
-            }
+                @{
+                    Model.Where(t => t.Nome.Equals(ViewData["Title"])).ToList().ForEach(s =>
+                    {
+                        @Html.RenderPartial("PrimeirosSocorrosPartial", s);
+                    });
+                }
+            </div>
         </div>
-
     </div>
-
 </div>

@@ -58,6 +58,7 @@ namespace Trials4Health.Controllers
         }
 
         public ViewResult Estatistica() => View(repository);
+        //public ViewResult PrimeirosSocorros() => View(repository.PrimeirosSocorros);
         public ViewResult Desmaios() => View(repository.PrimeirosSocorros);
         public ViewResult Entorses() => View(repository.PrimeirosSocorros);
         public ViewResult Hipotermia() => View(repository.PrimeirosSocorros);
