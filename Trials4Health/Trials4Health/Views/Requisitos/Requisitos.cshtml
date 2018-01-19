@@ -1,5 +1,4 @@
-﻿@model IEnumerable<Requisitos>
-@{
+﻿@{
     ViewData["Title"] = "Requisitos";
 }
 
@@ -10,20 +9,9 @@
 
 
     <div class="panel-body" style="color:white;opacity:1;">
-        @{
-            foreach (Requisitos req in Model)
-            {
-
-                <div>
-                    <div>
-                        Nome: @req.Nome
-                        <br />
-                        Descrição: @req.Descrição
-                    </div>
-                </div>
-                <br />
-            }
-        }
+        <a asp-action="Create" asp-controller="Requisitos">Criar Requisitos</a>
+        <br />
+        <a asp-action="Visualizar" asp-controller="Requisitos">Ver Requisitos</a>
     </div>
 
 </div>

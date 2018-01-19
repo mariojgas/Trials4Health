@@ -33,6 +33,18 @@ namespace Trials4Health.Data
             modelBuilder.Entity<Turista>()
                 .HasKey(tur => tur.ID_Turista);
 
+            modelBuilder.Entity<Cuidados>()
+                .HasKey(cui => cui.ID_Cuidado);
+
+            modelBuilder.Entity<Equipamentos>()
+                .HasKey(eq => eq.ID_Equipamento);
+
+            modelBuilder.Entity<Requisitos>()
+                .HasKey(req => req.ID_Requisito);
+
+            modelBuilder.Entity<PrimeirosSocorros>()
+                .HasKey(pri => pri.ID_SOS);
+
             // Foreign keys
             /*modelBuilder.Entity<TrilhosPercorridos>()
                 .HasOne(tp => tp.Trilhos)

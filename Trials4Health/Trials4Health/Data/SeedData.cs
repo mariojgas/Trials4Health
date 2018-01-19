@@ -8,10 +8,12 @@ namespace Trials4Health.Data
 {
     public class SeedData
     {
+        public static ApplicationDbContext dbContext;
+
         public static void EnsurePopulated(IServiceProvider serviceProvider)
         {
-            ApplicationDbContext dbContext = (ApplicationDbContext)serviceProvider.GetService(typeof(ApplicationDbContext));
 
+            dbContext = (ApplicationDbContext)serviceProvider.GetService(typeof(ApplicationDbContext));
             dbContext.Database.EnsureCreated();
 
             #region EnsureDatabaseData

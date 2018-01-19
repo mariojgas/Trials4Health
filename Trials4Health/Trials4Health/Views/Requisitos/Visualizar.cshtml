@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Requisitos>
+@{
+    ViewData["Title"] = "Requisitos";
+}
+
+<div class="panel panel-primary" style="margin-top:60px;margin-bottom:10px;opacity:0.8;">
+    <div class="panel-heading">
+        <h1 class=" panel-title">@ViewData["Title"]</h1>
+    </div>
+
+
+    <div class="panel-body" style="color:white;opacity:1;">
+        @{
+            foreach (Requisitos req in Model)
+            {
+
+                <div>
+                    <div>
+                        Nome: @req.Nome
+                        <br />
+                        Descrição: @req.Descrição
+                    </div>
+                </div>
+                <br />
+            }
+        }
+    </div>
+
+</div>
