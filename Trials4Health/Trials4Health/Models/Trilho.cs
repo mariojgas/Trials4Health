@@ -15,7 +15,7 @@ namespace Trials4Health.Models
 
         public string Nome { get; set; }
         public decimal Distancia { get; set; }
-        //public Estatisticas estatisticas { get; set; }
 
+        public IEnumerable<TrilhosPercorridos> TrilhosPercorridos { get; set; }
     }
 }

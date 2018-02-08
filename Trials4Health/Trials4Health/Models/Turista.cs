@@ -15,5 +15,8 @@ namespace Trials4Health.Models
         public int Idade { get; set; }
         public string Nome { get; set; }
         public string CondicaoFisica { get; set; }
+
+
+        public IEnumerable<TrilhosPercorridos> TrilhosPercorridos { get; set; }
     }
 }
